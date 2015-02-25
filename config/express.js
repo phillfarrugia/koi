@@ -28,9 +28,6 @@ module.exports = function(app, config) {
   app.use(methodOverride());
 
   app.use(session({
-  genid: function(req) {
-    return genuuid() // use UUIDs for session IDs
-  },
   secret: 'qs2ifATZAxRXFmdupXAE',
   resave: false,
   saveUninitialized: false
@@ -42,9 +39,9 @@ module.exports = function(app, config) {
   // Configure passport middleware
   var User = require('../app/models/user');
 
-  passport.use(new LocalStrategy(User.createStrategy({
-    usernameField: 'email',
-  })));
+  passport.use(User.createStrategy({
+    usernameField: 'email'
+  }));
   passport.serializeUser(User.serializeUser());
   passport.deserializeUser(User.deserializeUser());
 
