@@ -8,12 +8,17 @@ var bodyParser = require('body-parser');
 var compress = require('compression');
 var methodOverride = require('method-override');
 
-
-/*
- * Passportjs Configuration
- */
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+
+
+// Configure passport middleware
+var User = require('./models/user');
+
+passport.use(new LocalStrategy(User.authenticate()));
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 passport.use(new LocalStrategy(
   function(username, password, done) {
