@@ -11,12 +11,10 @@ var methodOverride = require('method-override');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
-
 // Configure passport middleware
 var User = require('./models/user');
 
 passport.use(new LocalStrategy(User.authenticate()));
-
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
@@ -35,7 +33,6 @@ module.exports = function(app, config) {
   app.use(express.static(config.root + '/public'));
   app.use(methodOverride());
 
-  // enabling passport sessions
   app.use(express.session({ secret: 'qs2ifATZAxRXFmdupXAE' }));
   app.use(passport.initialize());
   app.use(passport.session());
