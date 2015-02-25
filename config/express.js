@@ -42,7 +42,9 @@ module.exports = function(app, config) {
   // Configure passport middleware
   var User = require('../app/models/user');
 
-  passport.use(new LocalStrategy(User.authenticate()));
+  passport.use(new LocalStrategy(User.createStrategy({
+    usernameField: 'email',
+  })));
   passport.serializeUser(User.serializeUser());
   passport.deserializeUser(User.deserializeUser());
 
