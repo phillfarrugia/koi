@@ -9,7 +9,7 @@ var UserSchema = new Schema({
   role: Number
 });
 
-User.plugin(passportLocalMongoose);
+UserSchema.plugin(passportLocalMongoose);
 
 mongoose.model('User', UserSchema);
 

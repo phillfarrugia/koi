@@ -10,13 +10,7 @@ var methodOverride = require('method-override');
 
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
-
-// Configure passport middleware
-var User = require('./models/user');
-
-passport.use(new LocalStrategy(User.authenticate()));
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
+var session = require('express-session');
 
 module.exports = function(app, config) {
   app.set('views', config.root + '/app/views');
@@ -33,9 +27,24 @@ module.exports = function(app, config) {
   app.use(express.static(config.root + '/public'));
   app.use(methodOverride());
 
-  app.use(express.session({ secret: 'qs2ifATZAxRXFmdupXAE' }));
+  app.use(session({
+  genid: function(req) {
+    return genuuid() // use UUIDs for session IDs
+  },
+  secret: 'qs2ifATZAxRXFmdupXAE',
+  resave: false,
+  saveUninitialized: false
+  }))
+
   app.use(passport.initialize());
   app.use(passport.session());
+
+  // Configure passport middleware
+  var User = require('../app/models/user');
+
+  passport.use(new LocalStrategy(User.authenticate()));
+  passport.serializeUser(User.serializeUser());
+  passport.deserializeUser(User.deserializeUser());
 
   var controllers = glob.sync(config.root + '/app/controllers/*.js');
   controllers.forEach(function (controller) {
