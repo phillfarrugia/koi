@@ -34,8 +34,6 @@ module.exports = function(app, config) {
   saveUninitialized: false
   }))
 
-  global.rekuire = require('rekuire');
-
   app.use(passport.initialize());
   app.use(passport.session());
 
