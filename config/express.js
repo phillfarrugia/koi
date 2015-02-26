@@ -11,6 +11,7 @@ var methodOverride = require('method-override');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var session = require('express-session');
+var features = require('./features');
 
 module.exports = function(app, config) {
   app.set('views', config.root + '/app/views');
@@ -32,6 +33,8 @@ module.exports = function(app, config) {
   resave: false,
   saveUninitialized: false
   }))
+
+  global.rekuire = require('rekuire');
 
   app.use(passport.initialize());
   app.use(passport.session());

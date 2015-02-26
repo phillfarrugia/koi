@@ -21,7 +21,6 @@
     "passport": "^0.2.1",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^1.0.0",
-    "rekuire": "^0.1.9",
     "serve-favicon": "~2.2.0"
   },
   "devDependencies": {
