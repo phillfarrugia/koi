@@ -5,14 +5,14 @@ html(lang='en')
     meta(name='viewport', content='width=device-width')
     title= title
     block css
-      link(rel='stylesheet', href='/css/style.css')
-    //- block js
-    //-   script(src='/js/jquery-2.1.3.min.js')
-    //-   script(src='/js/bootstrap.min.js')
+      link(rel='stylesheet', href='/css/main.min.css')
+      link(rel='stylesheet', href='/css/bower.min.css')
+    block js
+      script(src='/js/bower.min.js')
   body
-    
+
     <!-- Global Navigation Bar -->
-    nav.navbar.navbar-default.navbar-fixed-top
+    nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
       div.container-fluid
         div.navbar-header
 
@@ -49,6 +49,5 @@ html(lang='en')
               a(href='#') Link
             li
               a(href='#') Link
-
 
     block content
