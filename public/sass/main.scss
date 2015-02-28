@@ -35,7 +35,7 @@ body {
 	background-image: url($hero);
 	background-size: cover;
 	background-position: right bottom;
-	height: 45em;
+	height: 48em;
 
 	nav {
 		background: none;
@@ -66,6 +66,10 @@ body {
 			font-weight: $thick;
 		}
 
+	}
+
+	.img-responsive {
+		padding-top: 10px;
 	}
 }
 
