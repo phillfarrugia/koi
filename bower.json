@@ -4,6 +4,21 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "components"
-  ]
+    "components",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/phillfarrugia/koi",
+  "authors": [
+    "Phill Farrugia <me@phillfarrugia.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootflatv2": "~2.0.4",
+    "bootstrap": "~3.3.2",
+    "jquery": "~2.1.3"
+  }
 }
