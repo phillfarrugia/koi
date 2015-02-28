@@ -13,6 +13,8 @@ var LocalStrategy = require('passport-local').Strategy;
 var session = require('express-session');
 var features = require('./features');
 
+var sassMiddlware = require('node-sass-middleware');
+
 module.exports = function(app, config) {
   app.set('views', config.root + '/app/views');
   app.set('view engine', 'jade');
@@ -33,6 +35,15 @@ module.exports = function(app, config) {
   resave: false,
   saveUninitialized: false
   }))
+
+  // Configure Sass middleware
+  app.use(sassMiddlware({
+    src: config.root + '/public/sass',
+    dest: config.root + '/public/css',
+    debug: true,
+    outputStyle: 'compressed',
+    prefix: '/css'
+  }));
 
   app.use(passport.initialize());
   app.use(passport.session());
