@@ -53,7 +53,10 @@ module.exports = function (grunt) {
     bower_concat: {
       all: {
         dest: 'public/js/bower.js',
-        cssDest: 'public/css/bower.css'
+        cssDest: 'public/css/bower.css',
+        exclude: [
+          'sass-web-fonts'
+        ]
       }
     },
 
@@ -85,7 +88,7 @@ module.exports = function (grunt) {
       dist: {
         files: [{
         expand: true,
-        cwd: 'public/sass',
+        cwd: 'public/',
         src: ['*.scss'],
         dest: 'public/css',
         ext: '.css'
