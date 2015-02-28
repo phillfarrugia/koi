@@ -52,8 +52,12 @@ body {
 			font-weight: $ultra-thin;
 		}
 
-		ul li:hover {
-			opacity: 0.8;
+		ul li {
+			opacity: 0.6;
+		}
+
+		ul li:hover, .active {
+			opacity: 1;
 		}
 
 		ul li {
