@@ -51,10 +51,7 @@ module.exports = function (grunt) {
     bower_concat: {
       all: {
         dest: 'public/js/bower.js',
-        cssDest: 'public/css/bower.css',
-        mainFiles: {
-          'bootflatv2': [ 'bootflat/css/bootflat.css' ]
-        }
+        cssDest: 'public/css/bower.css'
       }
     },
 
@@ -113,7 +110,7 @@ module.exports = function (grunt) {
     }, 500);
   });
 
-  grunt.registerTask('buildbower', [
+  grunt.registerTask('build', [
     'bower_concat',
     'uglify:bower',
     'sass',
