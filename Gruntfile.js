@@ -116,8 +116,8 @@ module.exports = function (grunt) {
   grunt.registerTask('buildbower', [
     'bower_concat',
     'uglify:bower',
-    'cssmin',
-    'sass'
+    'sass',
+    'cssmin'
   ]);
 
   grunt.registerTask('default', [
