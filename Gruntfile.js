@@ -33,11 +33,13 @@ module.exports = function (grunt) {
       },
       css: {
         files: [
-          'public/css/*.css'
+          'public/css/*.css',
+          'public/sass/*.scss'
         ],
+        tasks: ['develop', 'build'],
         options: {
           livereload: reloadPort
-        }
+        },
       },
       views: {
         files: [
