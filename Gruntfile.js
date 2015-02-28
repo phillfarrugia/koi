@@ -80,7 +80,19 @@ module.exports = function (grunt) {
           ext: '.min.css'
         }]
       }
+    },
+
+    sass: {
+      dist: {
+        files: [{
+        expand: true,
+        cwd: 'public/sass',
+        src: ['*.scss'],
+        dest: 'public/css',
+        ext: '.css'
+      }]
     }
+  }
   });
 
   grunt.config.requires('watch.js.files');
@@ -104,7 +116,8 @@ module.exports = function (grunt) {
   grunt.registerTask('buildbower', [
     'bower_concat',
     'uglify:bower',
-    'cssmin'
+    'cssmin',
+    'sass'
   ]);
 
   grunt.registerTask('default', [
