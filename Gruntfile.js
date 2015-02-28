@@ -17,6 +17,7 @@ module.exports = function (grunt) {
         file: 'app.js'
       }
     },
+
     watch: {
       options: {
         nospawn: true,
@@ -45,6 +46,40 @@ module.exports = function (grunt) {
         ],
         options: { livereload: reloadPort }
       }
+    },
+
+    bower_concat: {
+      all: {
+        dest: 'public/js/bower.js',
+        cssDest: 'public/css/bower.css',
+        mainFiles: {
+          'bootflatv2': [ '/bootflat/css/bootflat.css' ]
+        }
+      }
+    },
+
+    uglify: {
+      bower: {
+        options: {
+          mangle: true,
+          compress: true
+        },
+        files: {
+          'public/js/bower.min.js': 'public/js/bower.js',
+        }
+      }
+    },
+
+    cssmin: {
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'public/css',
+          src: ['*.css', '!*.min.css'],
+          dest: 'public/css',
+          ext: '.min.css'
+        }]
+      }
     }
   });
 
@@ -65,6 +100,12 @@ module.exports = function (grunt) {
         });
     }, 500);
   });
+
+  grunt.registerTask('buildbower', [
+    'bower_concat',
+    'uglify:bower',
+    'cssmin'
+  ]);
 
   grunt.registerTask('default', [
     'develop',
