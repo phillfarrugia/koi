@@ -1,55 +1,55 @@
 doctype html
 html(lang='en')
-  head
-    meta(charset='UTF-8')
-    meta(name='viewport', content='width=device-width')
-    title= title
-    block css
-      link(rel='stylesheet', href='/css/main.min.css')
-      link(rel='stylesheet', href='/css/bower.min.css')
-    block js
-      script(src='/js/bower.min.js')
-  body
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width')
+		title= title
+		block css
+			link(rel='stylesheet', href='/css/main.min.css')
+			link(rel='stylesheet', href='/css/bower.min.css')
+		block js
+			script(src='/js/bower.min.js')
+	body
 
-    <!-- Global Navigation Bar -->
-    nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
-      div.container
-        div.navbar-header
+		<!-- Global Navigation Bar -->
+		nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+			div.container
+				div.navbar-header
 
-          <!-- Hamburger Menu -->
-          button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#global-nav')
-            span.sr-only
-              Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.navbar-brand(href='') Project Brand Logo
+					<!-- Hamburger Menu -->
+					button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#global-nav')
+						span.sr-only
+							Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href='') Project Brand Logo
 
-          <!-- Navbar Items Far Left -->
-        div.collapse.navbar-collapse(id='global-nav')
-          ul.nav.navbar-nav
-            li.active
-              a(href='#') Link
-            li
-              a(href='#') Link
-            li
-              a(href='#') Link
-            li
-              a(href='#') Link
-            li
-              a(href='#') Link
-            li
-              a(href='#') Link
+					<!-- Navbar Items Far Left -->
+				div.collapse.navbar-collapse(id='global-nav')
+					ul.nav.navbar-nav
+						li.active
+							a(href='#') Link
+						li
+							a(href='#') Link
+						li
+							a(href='#') Link
+						li
+							a(href='#') Link
+						li
+							a(href='#') Link
+						li
+							a(href='#') Link
 
-          <!-- Navbar Items Far Right -->
-          ul.nav.navbar-nav.navbar-right
-            li
-              a(href='#') Link
-            li
-              a(href='#') Link
-            li
-              a(href='#') Link
-    div.container.col-md-12
-      block content
+					<!-- Navbar Items Far Right -->
+					ul.nav.navbar-nav.navbar-right
+						li
+							a(href='#') Link
+						li
+							a(href='#') Link
+						li
+							a(href='#') Link
+		div.container.col-md-12
+			block content
 
-  script(src='//localhost:35729/livereload.js')
+	script(src='//localhost:35729/livereload.js')
