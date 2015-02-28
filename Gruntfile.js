@@ -53,7 +53,7 @@ module.exports = function (grunt) {
         dest: 'public/js/bower.js',
         cssDest: 'public/css/bower.css',
         mainFiles: {
-          'bootflatv2': [ '/bootflat/css/bootflat.css' ]
+          'bootflatv2': [ 'bootflat/css/*.css' ]
         }
       }
     },
