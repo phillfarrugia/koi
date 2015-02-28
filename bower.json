@@ -17,6 +17,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootflatv2": "~2.0.4"
+    "jquery": "~2.1.3",
+    "bootstrap-sass": "~3.3.3"
   }
 }
