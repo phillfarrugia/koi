@@ -9,18 +9,18 @@ describe('feature flags', function() {
 
 			// all features visible in development
 			assert.equal(Features.development, true);
-			assert.equal(Features.test, true);
+			assert.equal(Features.staging, true);
 			assert.equal(Features.production, true);
 		})
 	})
 
-	describe('when test', function() {
-		it('should meet the test criteria', function() {
-			var Features = fflip.userFeatures('test');
+	describe('when staging', function() {
+		it('should meet the staging criteria', function() {
+			var Features = fflip.userFeatures('staging');
 
 			// only test and production visible in test
 			assert.equal(Features.development, false);
-			assert.equal(Features.test, true);
+			assert.equal(Features.staging, true);
 			assert.equal(Features.production, true);
 		})
 	})
@@ -31,7 +31,7 @@ describe('feature flags', function() {
 
 			// only production visible in production
 			assert.equal(Features.development, false);
-			assert.equal(Features.test, false);
+			assert.equal(Features.staging, false);
 			assert.equal(Features.production, true);
 		})
 	})
