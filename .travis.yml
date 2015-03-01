@@ -11,7 +11,9 @@ before_script:
 - grunt build
 - bower install
 deploy:
-  app: koi-api
+  app: 
+    master: koi-api
+    develop: staging-koi-api
   provider: heroku
   api_key:
     secure: OEjbn8Z4ZHKqQ13v8MMClDRarF8WD+sQXyFXyuEdFLE1HwvrZJNClVZobOxAeoXDUoX38J0xujXjeZGtkOXaVsQz5tRK1RXZcXJMONfsD//sol9+X8DuTJLw5BDCBobX/C8kYHvAXf0Sp2zSyNECYYQ/Hshakr8MezNXtitKh/c=
