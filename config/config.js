@@ -12,7 +12,7 @@ var config = {
     db: process.env.MONGOLAB_URI || 'mongodb://localhost/koi-development'
   },
 
-  test: {
+  staging: {
     root: rootPath,
     app: {
       name: 'koi'

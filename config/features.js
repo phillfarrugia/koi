@@ -9,12 +9,12 @@ fflip.config({
       return env == 'development' || !env;
     },
 
-    isTest: function(env, isTest) {
-      return env == 'development' || env == 'test';
+    isStaging: function(env, isTest) {
+      return env == 'development' || env == 'staging';
     },
 
     isProduction: function(env, isProduction) {
-      return env == 'development' || env == 'test' || env == 'production';
+      return env == 'development' || env == 'staging' || env == 'production';
     }
   },
 
@@ -26,10 +26,10 @@ fflip.config({
       }
     },
 
-    test: {
-      name: "Test Features",
+    staging: {
+      name: "Staging Features",
       criteria: {
-        isTest: true
+        isStaging: true
       }
     },
 
