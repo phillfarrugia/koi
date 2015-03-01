@@ -4,12 +4,12 @@ node_js:
 - '0.11'
 - '0.10'
 before_install: 
-	- npm install -g grunt-cli 
-	- npm install -g bower
+- npm install -g grunt-cli 
+- npm install -g bower
 install: npm install
 before_script: 
-	- grunt build
-	- bower install
+- grunt build
+- bower install
 deploy:
   app: koi-api
   provider: heroku
