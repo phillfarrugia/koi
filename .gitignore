@@ -32,3 +32,7 @@ node_modules
 # Added by Yo Generator
 public/components
 .sass-cache
+
+# Pre-compiled by Grunt, Bower, Sass
+public/css/*
+public/js/*

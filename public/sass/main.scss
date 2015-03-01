@@ -1,0 +1,84 @@
+//TODO: Better way of importing Sass mixins?
+@import '../components/sass-web-fonts/_web-fonts.scss';
+@include web-fonts('Titillium Web');
+@include web-fonts('Alegreya');
+@include web-fonts('Muli');
+
+$hero: 'https://unsplash.imgix.net/photo-1418226970361-9f1f7227d638?q=75&fm=jpg&s=4a5f190c7499eff6f7c77d88d8abf57e';
+
+// Font Faces
+$titillium:	'Titillium Web', sans-serif;
+$alegreya: 'Alegreya', sans-serif;
+$merriweather: 'Muli', sans-serif;
+
+// Font Sizes
+$xxx-large: 2em;
+$xx-large: 1.8em;
+$x-large: 1.4em;
+$large: 1.1em;
+$medium: 1em;
+$small: 0.8em;
+$x-small: 0.6em;
+
+// Font Weights
+$ultra-thin: 200;
+$thin: 300;
+$medium: 400;
+$thick: 500;
+$ultra-thick: 600;
+
+body {
+
+}
+
+#masthead {
+	background-image: url($hero);
+	background-size: cover;
+	background-position: right bottom;
+	height: 48em;
+
+	nav {
+		background: none;
+		border: none;
+
+		.navbar-brand, a, .active {
+			background-color: transparent;
+			color: #fff;
+		}
+
+		.navbar-brand {
+			font-family: $alegreya;
+			font-size: $x-large; 
+			font-weight: $ultra-thin;
+		}
+
+		ul li {
+			opacity: 0.6;
+		}
+
+		ul li:hover, .active {
+			opacity: 1;
+		}
+
+		ul li {
+			font-family: $titillium;
+			font-size: $large;
+			font-weight: $thick;
+		}
+
+	}
+
+	.img-responsive {
+		padding-top: 10px;
+	}
+}
+
+#hero {
+	background-image: url($hero);
+	background-size: cover;
+	background-position: right bottom;
+
+	h1, p {
+		color: #fff;
+	}
+}

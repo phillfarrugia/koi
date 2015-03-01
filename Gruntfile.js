@@ -17,6 +17,7 @@ module.exports = function (grunt) {
         file: 'app.js'
       }
     },
+
     watch: {
       options: {
         nospawn: true,
@@ -32,11 +33,13 @@ module.exports = function (grunt) {
       },
       css: {
         files: [
-          'public/css/*.css'
+          'public/css/*.css',
+          'public/sass/*.scss'
         ],
+        tasks: ['develop', 'build'],
         options: {
           livereload: reloadPort
-        }
+        },
       },
       views: {
         files: [
@@ -45,7 +48,53 @@ module.exports = function (grunt) {
         ],
         options: { livereload: reloadPort }
       }
+    },
+
+    bower_concat: {
+      all: {
+        dest: 'public/js/bower.js',
+        cssDest: 'public/css/bower.css',
+        exclude: [
+          'sass-web-fonts'
+        ]
+      }
+    },
+
+    uglify: {
+      bower: {
+        options: {
+          mangle: true,
+          compress: true
+        },
+        files: {
+          'public/js/bower.min.js': 'public/js/bower.js',
+        }
+      }
+    },
+
+    cssmin: {
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'public/css',
+          src: ['*.css', '!*.min.css'],
+          dest: 'public/css',
+          ext: '.min.css'
+        }]
+      }
+    },
+
+    sass: {
+      dist: {
+        files: [{
+        expand: true,
+        cwd: 'public/sass',
+        src: ['*.scss'],
+        dest: 'public/css',
+        ext: '.css'
+      }]
     }
+  }
   });
 
   grunt.config.requires('watch.js.files');
@@ -65,6 +114,13 @@ module.exports = function (grunt) {
         });
     }, 500);
   });
+
+  grunt.registerTask('build', [
+    'bower_concat',
+    'uglify:bower',
+    'sass',
+    'cssmin'
+  ]);
 
   grunt.registerTask('default', [
     'develop',

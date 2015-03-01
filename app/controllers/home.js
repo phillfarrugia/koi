@@ -1,19 +1,20 @@
 var express = require('express'),
   router = express.Router(),
   mongoose = require('mongoose'),
-  Article = mongoose.model('Article');
+  User = mongoose.model('User'),
+  fflip = require('fflip'),
+  Features = fflip.userFeatures(process.env.NODE_ENV);
 
 module.exports = function (app) {
   app.use('/', router);
 };
 
 router.get('/', function (req, res, next) {
-
-  Article.find(function (err, articles) {
+  User.find(function (err, articles) {
     if (err) return next(err);
-    res.render('index', {
-      title: 'Generator-Express MVC',
-      articles: articles
-    });
+        res.render('index', {
+        title: 'Development-Express MVC',
+        articles: articles
+      });
   });
 });

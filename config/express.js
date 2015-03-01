@@ -8,6 +8,11 @@ var bodyParser = require('body-parser');
 var compress = require('compression');
 var methodOverride = require('method-override');
 
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+var session = require('express-session');
+var features = require('./features');
+
 module.exports = function(app, config) {
   app.set('views', config.root + '/app/views');
   app.set('view engine', 'jade');
@@ -22,6 +27,24 @@ module.exports = function(app, config) {
   app.use(compress());
   app.use(express.static(config.root + '/public'));
   app.use(methodOverride());
+
+  app.use(session({
+  secret: 'qs2ifATZAxRXFmdupXAE',
+  resave: false,
+  saveUninitialized: false
+  }))
+
+  app.use(passport.initialize());
+  app.use(passport.session());
+
+  // Configure passport middleware
+  var User = require('../app/models/user');
+
+  passport.use(User.createStrategy({
+    usernameField: 'email'
+  }));
+  passport.serializeUser(User.serializeUser());
+  passport.deserializeUser(User.deserializeUser());
 
   var controllers = glob.sync(config.root + '/app/controllers/*.js');
   controllers.forEach(function (controller) {
