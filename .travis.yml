@@ -8,8 +8,8 @@ before_install:
 - npm install -g bower
 install: npm install
 before_script: 
-- grunt build
 - bower install
+- grunt build
 deploy:
   app: 
     master: koi-api
