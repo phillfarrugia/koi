@@ -9,7 +9,7 @@ var config = {
       name: 'koi'
     },
     port: 3000,
-    db: 'mongodb://localhost/koi-development'
+    db: process.env.MONGOLAB_URI || 'mongodb://localhost/koi-development'
   },
 
   test: {
@@ -18,7 +18,7 @@ var config = {
       name: 'koi'
     },
     port: 3000,
-    db: 'mongodb://localhost/koi-test'
+    db: process.env.MONGOLAB_URI || 'mongodb://localhost/koi-test'
   },
 
   production: {
@@ -27,7 +27,7 @@ var config = {
       name: 'koi'
     },
     port: 3000,
-    db: 'mongodb://localhost/koi-production'
+    db: process.env.MONGOLAB_URI || 'mongodb://localhost/koi-production'
   }
 };
 
