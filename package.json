@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node app.js",
     "test": "./node_modules/mocha/bin/mocha",
-    "postinstall": "bower install; grunt build"
+    "postinstall": "bower install; gem install sass; grunt build"
   },
   "dependencies": {
     "body-parser": "~1.10.0",
