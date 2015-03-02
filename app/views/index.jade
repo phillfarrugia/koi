@@ -1,8 +1,16 @@
 include layout
 
-div#masthead
-	include navigation
-	div.col-md-8.col-md-offset-2
-		img.img-responsive(src='http://i.imgur.com/zJbHEUL.png')
+div.main#masthead
+	section
+		include navigation
+		div.col-md-8.col-md-offset-2
+			img.img-responsive(src='http://i.imgur.com/zJbHEUL.png')
+	section
+		p Test
+	section
+		p Phill
+	section
+		p Page 3
 
 block content
+	script(src='/js/onepage-scroll.js')
