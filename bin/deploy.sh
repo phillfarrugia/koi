@@ -14,10 +14,6 @@ npm install load-grunt-tasks@2.0.0
 npm install request@2.51.0
 npm install time-grunt@1.0.0
 
-# Install sass
-ruby -v
-su -c "gem install sass"
-
 # Build front end dependencies
 bower install
 grunt build

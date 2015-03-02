@@ -40,3 +40,6 @@ public/img/*
 
 # Bower
 public/components/*
+
+# Ruby
+.bundle
