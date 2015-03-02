@@ -16,8 +16,7 @@ npm install time-grunt@1.0.0
 
 # Install sass
 ruby -v
-gem install sass
-sass -v
+su -c "gem install sass"
 
 # Build front end dependencies
 bower install
