@@ -3,14 +3,8 @@ node_js:
 - '0.12'
 - '0.11'
 - '0.10'
-before_install: 
-- npm install -g grunt-cli -g
-- npm install -g bower -g
-- gem install sass
 install: npm install
-before_script: 
-- bower install
-- grunt build
+before_script: bash ./bin/deploy.sh
 deploy:
   app: 
     master: koi-api
