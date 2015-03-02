@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node app.js",
     "test": "./node_modules/mocha/bin/mocha",
-    "postinstall": "./bin/deploy.sh"
+    "postinstall": "bash ./bin/deploy.sh"
   },
   "dependencies": {
     "body-parser": "~1.10.0",
