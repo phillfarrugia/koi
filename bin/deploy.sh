@@ -2,7 +2,11 @@
 
 set -o errexit # Exit on error
 
+# Install sass
+gem install sass
+
 # Install dev npm dependencies
+npm install bower@1.3.5
 npm install grunt@0.4.5
 npm install grunt-cli@0.1.13
 npm install grunt-bower-concat@0.4.0
