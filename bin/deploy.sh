@@ -6,17 +6,17 @@ set -o errexit # Exit on error
 gem install sass
 
 # Install dev npm dependencies
-npm install bower@1.3.5
-npm install grunt@0.4.5
-npm install grunt-cli@0.1.13
-npm install grunt-bower-concat@0.4.0
-npm install grunt-contrib-cssmin@0.12.2
-npm install grunt-contrib-sass@0.9.2
-npm install grunt-contrib-uglify@0.8.0
-npm install grunt-develop@0.4.0
-npm install load-grunt-tasks@2.0.0
-npm install request@2.51.0
-npm install time-grunt@1.0.0
+npm install bower -g
+npm install grunt
+npm install grunt-cli -g
+npm install grunt-bower-concat
+npm install grunt-contrib-cssmin
+npm install grunt-contrib-sass
+npm install grunt-contrib-uglify
+npm install grunt-develop
+npm install load-grunt-tasks
+npm install request
+npm install time-grunt
 
 # Build front end dependencies
 bower install
