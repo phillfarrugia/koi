@@ -19,3 +19,4 @@ deploy:
   api_key:
     secure: OEjbn8Z4ZHKqQ13v8MMClDRarF8WD+sQXyFXyuEdFLE1HwvrZJNClVZobOxAeoXDUoX38J0xujXjeZGtkOXaVsQz5tRK1RXZcXJMONfsD//sol9+X8DuTJLw5BDCBobX/C8kYHvAXf0Sp2zSyNECYYQ/Hshakr8MezNXtitKh/c=
   node: 0.12
+  run: gem install sass
