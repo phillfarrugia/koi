@@ -34,9 +34,9 @@ public/components
 .sass-cache
 
 # Grunt 
-public/css/*
-public/js/*
-public/img/*
+# public/css/*
+# public/js/*
+# public/img/*
 
 # Bower
-public/components/*
+# public/components/*
