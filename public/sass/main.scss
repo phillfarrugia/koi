@@ -1,5 +1,5 @@
-//TODO: Better way of importing Sass mixins?
 @import 'constants.scss';
+@import 'convenience.scss';
 
 #masthead {
 	background: url($header-background) no-repeat center center;
