@@ -5,7 +5,7 @@
   background-image: url("https://unsplash.imgix.net/photo-1418226970361-9f1f7227d638?q=75&fm=jpg&s=4a5f190c7499eff6f7c77d88d8abf57e");
   background-size: cover;
   background-position: right bottom;
-  height: 48em; }
+  height: 100%; }
   #masthead nav {
     background: none;
     border: none; }
@@ -24,8 +24,16 @@
       font-family: "Titillium Web", sans-serif;
       font-size: 1.1em;
       font-weight: 500; }
-  #masthead .img-responsive {
-    padding-top: 10px; }
+  #masthead h1 {
+    color: #fff;
+    font-family: "Alegreya", sans-serif;
+    font-size: 4em;
+    font-weight: 200; }
+  #masthead p {
+    color: #fff;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1.4em;
+    font-weight: 200; }
 
 #hero {
   background-image: url("https://unsplash.imgix.net/photo-1418226970361-9f1f7227d638?q=75&fm=jpg&s=4a5f190c7499eff6f7c77d88d8abf57e");

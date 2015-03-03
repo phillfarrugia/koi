@@ -12,6 +12,7 @@ $alegreya: 'Alegreya', sans-serif;
 $merriweather: 'Muli', sans-serif;
 
 // Font Sizes
+$ultra-large: 4em;
 $xxx-large: 2em;
 $xx-large: 1.8em;
 $x-large: 1.4em;
@@ -35,7 +36,7 @@ body {
 	background-image: url($hero);
 	background-size: cover;
 	background-position: right bottom;
-	height: 48em;
+	height: 100%;
 
 	nav {
 		background: none;
@@ -68,8 +69,18 @@ body {
 
 	}
 
-	.img-responsive {
-		padding-top: 10px;
+	h1 {
+		color: #fff;
+		font-family: $alegreya;
+		font-size: $ultra-large;
+		font-weight: $ultra-thin;
+	}
+
+	p {
+		color: #fff;
+		font-family: $titillium;
+		font-size: $x-large;
+		font-weight: $ultra-thin;
 	}
 }
 
