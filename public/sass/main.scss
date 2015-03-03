@@ -28,10 +28,6 @@ $medium: 400;
 $thick: 500;
 $ultra-thick: 600;
 
-body {
-
-}
-
 #masthead {
 	background-image: url($hero);
 	background-size: cover;
@@ -69,6 +65,10 @@ body {
 
 	}
 
+	#headline {
+		margin-top: 20%;
+	}
+
 	h1 {
 		color: #fff;
 		font-family: $alegreya;
@@ -92,4 +92,8 @@ body {
 	h1, p {
 		color: #fff;
 	}
+}
+
+.onepage-pagination li a {
+	color: #fff !important;
 }

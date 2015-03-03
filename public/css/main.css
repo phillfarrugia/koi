@@ -24,6 +24,8 @@
       font-family: "Titillium Web", sans-serif;
       font-size: 1.1em;
       font-weight: 500; }
+  #masthead #headline {
+    margin-top: 20%; }
   #masthead h1 {
     color: #fff;
     font-family: "Alegreya", sans-serif;
@@ -41,5 +43,8 @@
   background-position: right bottom; }
   #hero h1, #hero p {
     color: #fff; }
+
+.onepage-pagination li a {
+  color: #fff !important; }
 
 /*# sourceMappingURL=main.css.map */
