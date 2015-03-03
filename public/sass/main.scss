@@ -10,7 +10,7 @@
 		border: none;
 
 		.navbar-brand {
-			color: #474747;
+			color: $brand-dark-brown;
 			font-family: $alegreya;
 			font-weight: $thick;
 			font-size: $xx-large;
@@ -18,7 +18,7 @@
 
 		.navbar-nav {
 			li a {
-				color: #474747;
+				color: $brand-dark-brown;
 				opacity: 0.9;
 
 				&:hover {
@@ -27,12 +27,44 @@
 			}
 
 			.active a {
-				color: #474747;
+				color: $brand-dark-brown;
 				font-weight: $thick;
 				background-color: transparent;
 				opacity: 1;
 			}
 		}
 
+		.navbar-toggle {
+			background-color: transparent;
+			border: none;
+		
+			.icon-bar {
+				background-color: $brand-dark-brown;
+			}
+		}
+
+		.navbar-collapse {
+			border: none;
+			box-shadow: none;
+		}
+	}
+
+	#headline {
+		font-family: $alegreya !important;
+		color: $white;
+
+		h1 {
+			font-weight: $thick;
+			font-size: $semi-ultra-large;
+		}
+
+		.lead {
+			font-weight: $medium;
+			font-size: $x-large;
+		}
+
+		@media #{$mobile} {
+		  text-align: center;
+		}
 	}
 }

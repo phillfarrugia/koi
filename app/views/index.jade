@@ -3,15 +3,16 @@ include layout
 div.main#masthead
 	section
 		include navigation
-		div.container-fluid
-			div.col-xs-12#iphone
-				img.center-block(src='http://i.imgur.com/zJbHEUL.png')
-			div.col-xs-12#headline
-				h1 Headline.
-				p.lead 
-					| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					| Donec ac venenatis eros. Suspendisse suscipit massa quis
-					| massa accumsan porttitor. Ut efficitur cursus gravida.
+		div.container
+			div.row
+				div.col-xs-12.col-lg-4.col-lg-offset-2
+					img.center-block(src='http://i.imgur.com/R5D0MTA.png' width='323px' height='649px')
+				div.col-xs-12.col-lg-4#headline
+					h1 Headline.
+					p.lead 
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						| Donec ac venenatis eros. Suspendisse suscipit massa quis
+						| massa accumsan porttitor. Ut efficitur cursus gravida.
 	section
 		p Test
 	section

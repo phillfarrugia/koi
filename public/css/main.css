@@ -22,5 +22,25 @@
       font-weight: 500;
       background-color: transparent;
       opacity: 1; }
+    #masthead .navbar-default .navbar-toggle {
+      background-color: transparent;
+      border: none; }
+      #masthead .navbar-default .navbar-toggle .icon-bar {
+        background-color: #474747; }
+    #masthead .navbar-default .navbar-collapse {
+      border: none;
+      box-shadow: none; }
+  #masthead #headline {
+    font-family: "Alegreya", sans-serif !important;
+    color: #fff; }
+    #masthead #headline h1 {
+      font-weight: 500;
+      font-size: 3em; }
+    #masthead #headline .lead {
+      font-weight: 400;
+      font-size: 1.4em; }
+    @media (max-width: 768px) {
+      #masthead #headline {
+        text-align: center; } }
 
 /*# sourceMappingURL=main.css.map */
