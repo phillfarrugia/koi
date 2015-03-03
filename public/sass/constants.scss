@@ -1,0 +1,34 @@
+@import '../components/sass-web-fonts/_web-fonts.scss';
+
+@include web-fonts('Titillium Web');
+@include web-fonts('Alegreya');
+@include web-fonts('Muli');
+
+// Font Faces
+$titillium:	'Titillium Web', sans-serif;
+$alegreya: 'Alegreya', sans-serif;
+$merriweather: 'Muli', sans-serif;
+
+$header-background: 'https://unsplash.imgix.net/29/hazy-lake.jpg?q=75&fm=jpg&s=1e1c7c0dfb7b7727b4823f62c9dbc2c5';
+
+// Font Sizes
+$ultra-large: 4em;
+$xxx-large: 2em;
+$xx-large: 1.8em;
+$x-large: 1.4em;
+$large: 1.1em;
+$medium: 1em;
+$small: 0.8em;
+$x-small: 0.6em;
+
+// Font Weights
+$ultra-thin: 200;
+$thin: 300;
+$medium: 400;
+$thick: 500;
+$ultra-thick: 600;
+
+// Media Queries
+$mobile: "(max-width: 768px)";
+$tablet: "(max-width: 992px)";
+$desktop: "(max-width: 1200px)";
