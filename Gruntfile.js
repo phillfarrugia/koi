@@ -1,4 +1,4 @@
-'use strict';
+
 
 var request = require('request');
 
@@ -55,8 +55,10 @@ module.exports = function (grunt) {
         dest: 'public/js/bower.js',
         cssDest: 'public/css/bower.css',
         exclude: [
-          'sass-web-fonts'
-        ]
+          'sass-web-fonts',
+          'bourbon'
+        ],
+        mainFiles: ['../components/bourbon/app/assets/stylesheets/_bourbon.scss']
       }
     },
 

@@ -13,7 +13,7 @@ router.get('/', function (req, res, next) {
   User.find(function (err, articles) {
     if (err) return next(err);
         res.render('index', {
-        title: 'Development-Express MVC',
+        title: 'Koi',
         articles: articles
       });
   });

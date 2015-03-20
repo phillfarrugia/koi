@@ -1,5 +1,5 @@
-@import 'constants.scss';
-@import 'convenience.scss';
+@import "constants.scss";
+@import "convenience.scss";
 
 #masthead {
 	background: url($header-background) no-repeat center center;
@@ -12,13 +12,14 @@
 		.navbar-brand {
 			color: $white;
 			font-family: $alegreya;
-			font-weight: $thick;
-			font-size: $xx-large;
+			font-weight: $ultra-thin;
+			font-size: $x-large;
 		}
 
 		.navbar-nav {
 			li a {
 				color: $white;
+				font-family: $titillium;
 				opacity: 0.9;
 
 				&:hover {
@@ -46,25 +47,6 @@
 		.navbar-collapse {
 			border: none;
 			box-shadow: none;
-		}
-	}
-
-	#headline {
-		font-family: $alegreya !important;
-		color: $white;
-
-		h1 {
-			font-weight: $thick;
-			font-size: $semi-ultra-large;
-		}
-
-		.lead {
-			font-weight: $medium;
-			font-size: $x-large;
-		}
-
-		@media #{$mobile} {
-		  text-align: center;
 		}
 	}
 }
