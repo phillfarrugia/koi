@@ -1,6 +1,8 @@
-[![Build Status](https://travis-ci.org/phillfarrugia/koi.svg?branch=master)](https://travis-ci.org/phillfarrugia/koi)
+master 
+<br> [![Build Status](https://travis-ci.org/phillfarrugia/koi.svg?branch=master)](https://travis-ci.org/phillfarrugia/koi)
 
-![Koi](http://img0.etsystatic.com/000/0/5151863/il_fullxfull.273440846.jpg)
+develop 
+<br>[![Build Status](https://travis-ci.org/phillfarrugia/koi.svg?branch=develop)](https://travis-ci.org/phillfarrugia/koi)
 
 # Steps
 1. `npm install`
