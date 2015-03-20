@@ -10,7 +10,7 @@
 		border: none;
 
 		.navbar-brand {
-			color: $brand-dark-brown;
+			color: $white;
 			font-family: $alegreya;
 			font-weight: $thick;
 			font-size: $xx-large;
@@ -18,7 +18,7 @@
 
 		.navbar-nav {
 			li a {
-				color: $brand-dark-brown;
+				color: $white;
 				opacity: 0.9;
 
 				&:hover {
@@ -27,7 +27,7 @@
 			}
 
 			.active a {
-				color: $brand-dark-brown;
+				color: $white;
 				font-weight: $thick;
 				background-color: transparent;
 				opacity: 1;
@@ -39,7 +39,7 @@
 			border: none;
 		
 			.icon-bar {
-				background-color: $brand-dark-brown;
+				background-color: $white;
 			}
 		}
 
