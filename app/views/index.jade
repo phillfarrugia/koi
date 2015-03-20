@@ -1,8 +1,25 @@
 include layout
 
-div#masthead
-	include navigation
-	div.col-md-8.col-md-offset-2
-		img.img-responsive(src='http://i.imgur.com/zJbHEUL.png')
+div.main#masthead
+	section
+		include navigation
+		div.container
+			div.row
+				div.col-xs-12#iphone
+					img.center-block(src='http://i.imgur.com/zJbHEUL.png' width='323px' height='649px')
+				//
+					div.col-xs-12.col-lg-4#headline
+					h1 Headline.
+					p.lead 
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						| Donec ac venenatis eros. Suspendisse suscipit massa quis
+						| massa accumsan porttitor. Ut efficitur cursus gravida.
+	section
+		p Test
+	section
+		p Test
+	section
+		p Test
 
 block content
+	script(src='/js/onepage-scroll.js')

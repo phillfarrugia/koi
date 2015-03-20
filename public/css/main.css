@@ -2,36 +2,45 @@
 @import url("//fonts.googleapis.com/css?family=Alegreya");
 @import url("//fonts.googleapis.com/css?family=Muli");
 #masthead {
-  background-image: url("https://unsplash.imgix.net/photo-1418226970361-9f1f7227d638?q=75&fm=jpg&s=4a5f190c7499eff6f7c77d88d8abf57e");
-  background-size: cover;
-  background-position: right bottom;
-  height: 48em; }
-  #masthead nav {
-    background: none;
+  background: url("https://unsplash.imgix.net/photo-1418226970361-9f1f7227d638?q=75&fm=jpg&s=4a5f190c7499eff6f7c77d88d8abf57e") no-repeat center center;
+  height: 100%; }
+  #masthead .navbar-default {
+    background-color: transparent;
     border: none; }
-    #masthead nav .navbar-brand, #masthead nav a, #masthead nav .active {
-      background-color: transparent;
-      color: #fff; }
-    #masthead nav .navbar-brand {
+    #masthead .navbar-default .navbar-brand {
+      color: #fff;
       font-family: "Alegreya", sans-serif;
-      font-size: 1.4em;
-      font-weight: 200; }
-    #masthead nav ul li {
-      opacity: 0.6; }
-    #masthead nav ul li:hover, #masthead nav .active {
+      font-weight: 500;
+      font-size: 1.8em; }
+    #masthead .navbar-default .navbar-nav li a {
+      color: #fff;
+      opacity: 0.9; }
+      #masthead .navbar-default .navbar-nav li a:hover {
+        opacity: 1; }
+    #masthead .navbar-default .navbar-nav .active a {
+      color: #fff;
+      font-weight: 500;
+      background-color: transparent;
       opacity: 1; }
-    #masthead nav ul li {
-      font-family: "Titillium Web", sans-serif;
-      font-size: 1.1em;
-      font-weight: 500; }
-  #masthead .img-responsive {
-    padding-top: 10px; }
-
-#hero {
-  background-image: url("https://unsplash.imgix.net/photo-1418226970361-9f1f7227d638?q=75&fm=jpg&s=4a5f190c7499eff6f7c77d88d8abf57e");
-  background-size: cover;
-  background-position: right bottom; }
-  #hero h1, #hero p {
+    #masthead .navbar-default .navbar-toggle {
+      background-color: transparent;
+      border: none; }
+      #masthead .navbar-default .navbar-toggle .icon-bar {
+        background-color: #fff; }
+    #masthead .navbar-default .navbar-collapse {
+      border: none;
+      box-shadow: none; }
+  #masthead #headline {
+    font-family: "Alegreya", sans-serif !important;
     color: #fff; }
+    #masthead #headline h1 {
+      font-weight: 500;
+      font-size: 3em; }
+    #masthead #headline .lead {
+      font-weight: 400;
+      font-size: 1.4em; }
+    @media (max-width: 768px) {
+      #masthead #headline {
+        text-align: center; } }
 
 /*# sourceMappingURL=main.css.map */
