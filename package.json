@@ -8,13 +8,13 @@
     "test-cov": "grunt coveralls"
   },
   "dependencies": {
-    "body-parser": "~1.10.0",
-    "compression": "~1.3.0",
+    "body-parser": "~1.12.2",
+    "compression": "~1.4.3",
     "cookie-parser": "~1.3.3",
-    "express": "~4.11.0",
+    "express": "~4.12.3",
     "express-session": "^1.10.3",
     "fflip": "^2.1.0",
-    "glob": "~4.3.1",
+    "glob": "~5.0.3",
     "jade": "~1.9.1",
     "method-override": "~2.3.0",
     "mongoose": "^3.8.23",
