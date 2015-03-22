@@ -149,10 +149,7 @@ module.exports = function (grunt) {
     }, 500);
   });
 
-  grunt.registerTask('coveralls', ['mocha_istanbul:coveralls']);
-  grunt.registerTask('coverage', ['mocha_istanbul:coverage']);
-
-  grunt.event.on('coverage', function(lcov, done){
+    grunt.event.on('coverage', function(lcov, done){
     require('coveralls').handleInput(lcov, function(err){
         if (err) {
             return done(err);
@@ -161,12 +158,14 @@ module.exports = function (grunt) {
     });
   });
 
+  grunt.registerTask('coveralls', ['mocha_istanbul:coveralls']);
+  grunt.registerTask('coverage', ['mocha_istanbul:coverage']);
+
   grunt.registerTask('build', [
     'bower_concat',
     'uglify:bower',
     'sass',
-    'cssmin',
-    'coveralls'
+    'cssmin'
   ]);
 
   grunt.registerTask('default', [
