@@ -35,6 +35,10 @@
       font-weight: 500;
       background-color: transparent;
       opacity: 1; }
+    #masthead .navbar-default .navbar-nav .btn-default {
+      background-color: transparent;
+      border-color: white;
+      color: white; }
     #masthead .navbar-default .navbar-toggle {
       background-color: transparent;
       border: none; }
