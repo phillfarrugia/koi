@@ -89,14 +89,46 @@ module.exports = function (grunt) {
     sass: {
       dist: {
         files: [{
-        expand: true,
-        cwd: 'public/sass',
-        src: ['*.scss'],
-        dest: 'public/css',
-        ext: '.css'
-      }]
+          expand: true,
+          cwd: 'public/sass',
+          src: ['*.scss'],
+          dest: 'public/css',
+          ext: '.css'
+        }]
+      }
+    },
+
+    mocha_istanbul: {
+      coverage: {
+        src: 'test',
+        options: {
+          mask: '*.spec.js'
+        }
+      },
+      coveralls: {
+        src: ['test'],
+        options: {
+          coverage: true,
+          check: {
+            lines: 75,
+            statements: 75
+          },
+          root: './',
+          reportFormats: ['cobertura', 'lcovonly', 'html']
+        }
+      }
+    },
+    istanbul_check_coverage: {
+      default: {
+        options: {
+          coverageFolder: 'coverage*',
+          check: {
+            lines: 80,
+            statements: 80
+          }
+        }
+      }
     }
-  }
   });
 
   grunt.config.requires('watch.js.files');
@@ -116,6 +148,18 @@ module.exports = function (grunt) {
         });
     }, 500);
   });
+
+    grunt.event.on('coverage', function(lcov, done){
+    require('coveralls').handleInput(lcov, function(err){
+        if (err) {
+            return done(err);
+        }
+        done();
+    });
+  });
+
+  grunt.registerTask('coveralls', ['mocha_istanbul:coveralls']);
+  grunt.registerTask('coverage', ['mocha_istanbul:coverage']);
 
   grunt.registerTask('build', [
     'bower_concat',
