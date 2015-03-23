@@ -31,6 +31,56 @@ nav.navbar.navbar-default.navbar-fixed(role='navigation')
 			<!-- Navbar Items Far Right -->
 			ul.nav.navbar-nav.navbar-right
 				li
-					a(href='#') Log In
+					a
+						button.btn.btn-default(type='button' data-toggle='modal' data-target='#login') Log in
 				li
-					a(href='#') Sign Up
+					a
+						button.btn.btn-default(type='button' data-toggle='modal' data-target='#signup') Sign up
+
+<!-- Login modal -->			
+div.modal.fade#login
+	div.modal-dialog
+		div.modal-content
+			div.modal-header
+				button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+					span(aria-hidden='true') &times;
+				h4.modal-title Login
+			div.modal-body
+				form.form-horizontal(role='form' action='/login' method='post')
+					div.form-group
+						label.col-sm-2.control-label(for='username') Email
+						div.col-sm-10
+							input.form-control#username(type='username' name='username' placeholder='Email')
+					div.form-group
+						label.col-sm-2.control-label(for='password') Password
+						div.col-sm-10
+							input.form-control#password(type='password' name='password' placeholder='Password')
+					div.form-group
+						div.col-sm-offset-2.col-sm-10
+							button.btn.btn-default(type='submit' data-dismiss='modal') Sign in 
+							&nbsp;
+							button.btn.btn-danger(type='button' data-dismiss='modal') Cancel
+
+<!-- Sign up modal -->			
+div.modal.fade#signup
+	div.modal-dialog
+		div.modal-content
+			div.modal-header
+				button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+					span(aria-hidden='true') &times;
+				h4.modal-title Sign up
+			div.modal-body
+				form.form-horizontal(role='form' action='/register' method='post')
+					div.form-group
+						label.col-sm-2.control-label(for='username') Email
+						div.col-sm-10
+							input.form-control#username(type='username' name='username' placeholder='Email')
+					div.form-group
+						label.col-sm-2.control-label(for='password') Password
+						div.col-sm-10
+							input.form-control#password(type='password' name='password' placeholder='Password')
+					div.form-group
+						div.col-sm-offset-2.col-sm-10
+							button.btn.btn-default(type='submit') Sign up 
+							&nbsp
+							button.btn.btn-danger(type='button' data-dismiss='modal') Cancel

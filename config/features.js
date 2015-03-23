@@ -6,15 +6,15 @@ var fflip = require('fflip');
 fflip.config({
   criteria: {
     isDevelopment: function(env, isDevelopment) {
-      return env == 'development' || !env;
+      return !env || env == 'development';
     },
 
     isStaging: function(env, isTest) {
-      return env == 'development' || env == 'staging';
+      return !env || env == 'development' || env == 'staging';
     },
 
     isProduction: function(env, isProduction) {
-      return env == 'development' || env == 'staging' || env == 'production';
+      return !env || env == 'development' || env == 'staging' || env == 'production';
     }
   },
 

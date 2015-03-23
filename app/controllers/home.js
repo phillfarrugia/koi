@@ -3,18 +3,46 @@ var express = require('express'),
   mongoose = require('mongoose'),
   User = mongoose.model('User'),
   fflip = require('fflip'),
-  Features = fflip.userFeatures(process.env.NODE_ENV);
+  features = fflip.userFeatures(process.env.NODE_ENV),
+  passport = require('passport');
 
 module.exports = function (app) {
-  app.use('/', router);
+  if (features.production) {
+    app.use('/', router);
+  };
 };
 
 router.get('/', function (req, res, next) {
-  User.find(function (err, articles) {
+  User.find(function (err, users) {
     if (err) return next(err);
         res.render('index', {
         title: 'Koi',
-        articles: articles
+        users: users
       });
   });
 });
+
+if (features.development) {
+
+router.post('/login', function(req, res, next) {
+  passport.authenticate('local', {
+    successRedirect: '/',
+    failureRedirect: '/login',
+    failureFlash: true
+  });
+});
+
+router.post('/register', function(req, res, next) {
+  console.log(req.body);
+  User.register(new User({ username : req.body.username }), req.body.password, function(err, user) {
+        if (err) {
+            return res.render('register', { user : user });
+        }
+
+        passport.authenticate('local')(req, res, function () {
+          res.redirect('/');
+        });
+    });
+});
+
+};
