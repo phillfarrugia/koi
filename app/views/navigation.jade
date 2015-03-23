@@ -46,7 +46,7 @@ nav.navbar.navbar-default.navbar-fixed(role='navigation')
 							span(aria-hidden='true') &times;
 						h4.modal-title Login
 					div.modal-body
-						form.form-horizontal
+						form.form-horizontal(role='form' action='/login' method='post')
 							div.form-group
 								label.col-sm-2.control-label(for='email') Email
 								div.col-sm-10
@@ -57,7 +57,7 @@ nav.navbar.navbar-default.navbar-fixed(role='navigation')
 									input.form-control#password(type='password' placeholder='Password')
 							div.form-group
 								div.col-sm-offset-2.col-sm-10
-									button.btn.btn-default(type='button' data-dismiss='modal') Sign in 
+									button.btn.btn-default(type='submit' data-dismiss='modal') Sign in 
 									&nbsp
 									button.btn.btn-danger(type='button' data-dismiss='modal') Cancel
 		<!-- Sign up modal -->			
@@ -69,7 +69,7 @@ nav.navbar.navbar-default.navbar-fixed(role='navigation')
 							span(aria-hidden='true') &times;
 						h4.modal-title Sign up
 					div.modal-body
-						form.form-horizontal
+						form.form-horizontal(role='form' action='/register' method='post')
 							div.form-group
 								label.col-sm-2.control-label(for='email') Email
 								div.col-sm-10
@@ -80,6 +80,6 @@ nav.navbar.navbar-default.navbar-fixed(role='navigation')
 									input.form-control#password(type='password' placeholder='Password')
 							div.form-group
 								div.col-sm-offset-2.col-sm-10
-									button.btn.btn-default(type='button' data-dismiss='modal') Sign up 
+									button.btn.btn-default(type='submit') Sign up 
 									&nbsp
 									button.btn.btn-danger(type='button' data-dismiss='modal') Cancel
