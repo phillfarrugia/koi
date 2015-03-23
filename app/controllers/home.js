@@ -3,11 +3,13 @@ var express = require('express'),
   mongoose = require('mongoose'),
   User = mongoose.model('User'),
   fflip = require('fflip'),
-  Features = fflip.userFeatures(process.env.NODE_ENV),
+  features = fflip.userFeatures(process.env.NODE_ENV),
   passport = require('passport');
 
 module.exports = function (app) {
-  app.use('/', router);
+  if (features.production) {
+    app.use('/', router);
+  };
 };
 
 router.get('/', function (req, res, next) {

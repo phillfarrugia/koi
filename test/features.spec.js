@@ -3,6 +3,17 @@ features = require('../config/features'),
 fflip = require('fflip');
 
 describe('feature flags', function() {
+	describe('when undefined', function() {
+		it('should meet the development critera', function() {
+			var Features = fflip.userFeatures(undefined);
+
+			// all features visible in development
+			assert.equal(Features.development, true);
+			assert.equal(Features.staging, true);
+			assert.equal(Features.production, true);
+		})
+	})
+
 	describe('when development', function() {
 		it('should meet the development critera', function() {
 			var Features = fflip.userFeatures('development');
