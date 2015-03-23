@@ -48,18 +48,19 @@ div.modal.fade#login
 			div.modal-body
 				form.form-horizontal(role='form' action='/login' method='post')
 					div.form-group
-						label.col-sm-2.control-label(for='email') Email
+						label.col-sm-2.control-label(for='username') Email
 						div.col-sm-10
-							input.form-control#email(type='email' placeholder='Email')
+							input.form-control#username(type='username' name='username' placeholder='Email')
 					div.form-group
 						label.col-sm-2.control-label(for='password') Password
 						div.col-sm-10
-							input.form-control#password(type='password' placeholder='Password')
+							input.form-control#password(type='password' name='password' placeholder='Password')
 					div.form-group
 						div.col-sm-offset-2.col-sm-10
 							button.btn.btn-default(type='submit' data-dismiss='modal') Sign in 
-							&nbsp
+							&nbsp;
 							button.btn.btn-danger(type='button' data-dismiss='modal') Cancel
+
 <!-- Sign up modal -->			
 div.modal.fade#signup
 	div.modal-dialog
@@ -71,13 +72,13 @@ div.modal.fade#signup
 			div.modal-body
 				form.form-horizontal(role='form' action='/register' method='post')
 					div.form-group
-						label.col-sm-2.control-label(for='email') Email
+						label.col-sm-2.control-label(for='username') Email
 						div.col-sm-10
-							input.form-control#email(type='email' placeholder='Email')
+							input.form-control#username(type='username' name='username' placeholder='Email')
 					div.form-group
 						label.col-sm-2.control-label(for='password') Password
 						div.col-sm-10
-							input.form-control#password(type='password' placeholder='Password')
+							input.form-control#password(type='password' name='password' placeholder='Password')
 					div.form-group
 						div.col-sm-offset-2.col-sm-10
 							button.btn.btn-default(type='submit') Sign up 

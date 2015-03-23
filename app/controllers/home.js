@@ -22,6 +22,8 @@ router.get('/', function (req, res, next) {
   });
 });
 
+if (features.development) {
+
 router.post('/login', function(req, res, next) {
   passport.authenticate('local', {
     successRedirect: '/',
@@ -31,7 +33,8 @@ router.post('/login', function(req, res, next) {
 });
 
 router.post('/register', function(req, res, next) {
-  User.register(new User({ email : req.body.email }), req.body.password, function(err, user) {
+  console.log(req.body);
+  User.register(new User({ username : req.body.username }), req.body.password, function(err, user) {
         if (err) {
             return res.render('register', { user : user });
         }
@@ -41,3 +44,5 @@ router.post('/register', function(req, res, next) {
         });
     });
 });
+
+};
