@@ -9,8 +9,9 @@ describe('index', function() {
 	it('should load the page', function(done) {
 		request
 		.get('/')
+		.expect(200)
 		.end(function(err, res) {
-			console.log(res);
+			expect(res).to.exist;
 			done();
 		})
 	})
