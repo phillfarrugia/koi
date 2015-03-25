@@ -6,6 +6,8 @@ node_js:
 before_install: npm install -g grunt-cli
 install: npm install
 after_success: grunt coverage
+services:
+  - mongodb
 deploy:
   app: 
     master: koi-api
