@@ -33,7 +33,6 @@ router.post('/login', function(req, res, next) {
 });
 
 router.post('/register', function(req, res, next) {
-  console.log(req.body);
   User.register(new User({ username : req.body.username }), req.body.password, function(err, user) {
         if (err) {
             return res.render('register', { user : user });
