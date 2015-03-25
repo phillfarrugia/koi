@@ -154,7 +154,7 @@ module.exports = function (grunt) {
           if (err) {
               return done(err);
           }
-          console.log('sent to coveralls');
+          console.log('Sending coverage to coveralls');
           done();
       });
   });

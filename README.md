@@ -5,10 +5,10 @@
 ## Build Status
 
 ###### master 
-[![Build Status](https://travis-ci.org/phillfarrugia/koi.svg?branch=master)](https://travis-ci.org/phillfarrugia/koi) [![Coverage Status](https://coveralls.io/repos/phillfarrugia/koi/badge.svg?branch=feature%2Ftest-coverage)](https://coveralls.io/r/phillfarrugia/koi?branch=feature%2Ftest-coverage) [![Dependencies](https://david-dm.org/phillfarrugia/koi/master.svg)](https://david-dm.org/phillfarrugia/koi/master)
+[![Build Status](https://travis-ci.org/phillfarrugia/koi.svg?branch=master)](https://travis-ci.org/phillfarrugia/koi) [![Coverage Status](https://coveralls.io/repos/phillfarrugia/koi/badge.svg?branch=master)](https://coveralls.io/r/phillfarrugia/koi?branch=master) [![Dependencies](https://david-dm.org/phillfarrugia/koi/master.svg)](https://david-dm.org/phillfarrugia/koi/master)
 
 ###### develop 
-[![Build Status](https://travis-ci.org/phillfarrugia/koi.svg?branch=develop)](https://travis-ci.org/phillfarrugia/koi) [![Coverage Status](https://coveralls.io/repos/phillfarrugia/koi/badge.svg?branch=feature%2Ftest-coverage)](https://coveralls.io/r/phillfarrugia/koi?branch=feature%2Ftest-coverage) [![Dependencies](https://david-dm.org/phillfarrugia/koi/develop.svg)](https://david-dm.org/phillfarrugia/koi/develop)
+[![Build Status](https://travis-ci.org/phillfarrugia/koi.svg?branch=develop)](https://travis-ci.org/phillfarrugia/koi) [![Coverage Status](https://coveralls.io/repos/phillfarrugia/koi/badge.svg?branch=develop)](https://coveralls.io/r/phillfarrugia/koi?branch=develop) [![Dependencies](https://david-dm.org/phillfarrugia/koi/develop.svg)](https://david-dm.org/phillfarrugia/koi/develop)
 
 ## Installation
 1. Install npm dependencies `npm install`
