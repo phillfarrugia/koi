@@ -149,13 +149,14 @@ module.exports = function (grunt) {
     }, 500);
   });
 
-    grunt.event.on('coverage', function(lcov, done){
-    require('coveralls').handleInput(lcov, function(err){
-        if (err) {
-            return done(err);
-        }
-        done();
-    });
+  grunt.event.on('coverage', function(lcov, done){
+      require('coveralls').handleInput(lcov, function(err){
+          if (err) {
+              return done(err);
+          }
+          console.log('sent to coveralls');
+          done();
+      });
   });
 
   grunt.registerTask('coveralls', ['mocha_istanbul:coveralls']);
