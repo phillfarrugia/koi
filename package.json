@@ -39,7 +39,8 @@
     "istanbul": "^0.3.8",
     "load-grunt-tasks": "~3.1.0",
     "mocha": "^2.1.0",
-    "mockgoose": "^1.10.7",
+    "mocha-mongoose": "^1.0.4",
+    "mongodb": "^1.4.35",
     "request": "~2.54.0",
     "supertest": "^0.15.0",
     "time-grunt": "~1.1.0"
