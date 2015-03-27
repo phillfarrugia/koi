@@ -26,10 +26,10 @@ describe('index', function() {
 		};
 
 		//TODO: Implement validation when you have time
-		// it('should validate the email address')
-		// it('should validate the password')
+		it('should validate the email address')
+		it('should validate the password')
 
-		it('should handle valid requests from the registration form', function(done) {
+		it('should handle a valid request from the registration form', function(done) {
 			request
 			.post('/register')
 			.send(testUser)
@@ -41,6 +41,8 @@ describe('index', function() {
 				done();
 			})
 		})
+
+		it('should authenticate a new user')
 
 		it('should create a new user in the database', function(done) {
 			request
@@ -61,8 +63,5 @@ describe('index', function() {
 				})
 			})
 		})
-
-		// it('should authenticate the new user')
-		// it('should redirect')
 	})
 })
