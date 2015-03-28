@@ -29,7 +29,6 @@
 
 			.active a {
 				color: $white;
-				font-weight: $ultra-thick;
 				background-color: transparent;
 				opacity: 1;
 			}
@@ -63,8 +62,34 @@
 	}
 }
 
-#sidebar {
-	@media (min-width: 768px) {
+.navbar {
+	margin-bottom: 0px !important;
+}
+
+.sidebar {
+	height: 100%;
+	background-color: #787878;
+	padding-top: 20px;
+	font-size: $medium;
+
+	nav {
+		border: none !important;
+	}
+
+	nav, .navbar {
+		background-color: transparent !important;
+	}
+
+	.navbar-default .navbar-nav .active a {
+		background-color: transparent;
+		color: #fff !important;
+
+		&:hover {
+			background-color: transparent;
+		}
+	}
+
+	@media (min-width: $mobile) {
 	  .navbar .navbar-collapse {
 	    padding: 0;
 	    max-height: none;
@@ -82,6 +107,11 @@
 	  .navbar li a {
 	    padding-top: 12px;
 	    padding-bottom: 12px;
+	    color: #999 !important;
+
+	    &:hover {
+	    	color: #fff !important;
+	    }
 	  }
 	}
 }

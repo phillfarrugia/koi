@@ -1,32 +1,31 @@
 include layout
 include navigation
 
-div.row
-	div.col-sm-2#sidebar
-		nav.navbar.navbar-default.navbar-fixed(role='navigation')
-			div.container
-			div.navbar-header
+div.col-lg-1.sidebar
+	nav.navbar.navbar-default.navbar-fixed(role='navigation')
+		div.container
+		div.navbar-header
 
-				<!-- Hamburger Menu -->
-				button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#global-nav')
-					span.sr-only
-						Toggle navigation
-					span.icon-bar
-					span.icon-bar
-					span.icon-bar
+			<!-- Hamburger Menu -->
+			button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#side-nav')
+				span.sr-only
+					Toggle navigation
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
 
-				<!-- Navbar Items Far Left -->
-			div.collapse.navbar-collapse#global-nav
-				ul.nav.navbar-nav
-					li.active
-						a(href='#') About
-					li
-						a(href='#') Our vision
-					li
-						a(href='#') Features
-					li
-						a(href='#') Pricing
-					li
-						a(href='#') Members
-					li
-						a(href='#') Press
+			<!-- Navbar Items Far Left -->
+		div.collapse.navbar-collapse#side-nav
+			ul.nav.navbar-nav
+				li.active
+					a(href='#') About
+				li
+					a(href='#') Our vision
+				li
+					a(href='#') Features
+				li
+					a(href='#') Pricing
+				li
+					a(href='#') Members
+				li
+					a(href='#') Press
