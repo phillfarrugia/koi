@@ -76,6 +76,8 @@
 	padding-top: 20px;
 	font-size: $medium;
 	border-right: 1px #E7E7E7 solid;
+	padding: 0px !important;
+	margin: 0px !important;
 
 	nav {
 		border: none !important;
@@ -83,6 +85,10 @@
 
 	nav, .navbar {
 		background-color: transparent !important;
+
+		.icon {
+			font-size: $xx-large;
+		}
 	}
 
 	.navbar-default .navbar-nav .active a {
@@ -100,16 +106,26 @@
 	    padding: 0;
 	    max-height: none;
 	  }
+
 	  .navbar ul {
 	    float: none;
 	  }
+
 	  .navbar ul:not {
 	    display: block;
 	  }
+
 	  .navbar li {
 	    float: none;
 	    display: block;
+	    padding: 5px;
+	    border-bottom: 1px #E7E7E7 solid;
+
+	    &:hover {
+	    	background-color: #E7E7E7 !important;
+	    }
 	  }
+
 	  .navbar li a {
 	    padding-top: 12px;
 	    padding-bottom: 12px;

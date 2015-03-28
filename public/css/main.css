@@ -61,11 +61,15 @@
   background-color: #fff;
   padding-top: 20px;
   font-size: 400;
-  border-right: 1px #E7E7E7 solid; }
+  border-right: 1px #E7E7E7 solid;
+  padding: 0px !important;
+  margin: 0px !important; }
   .sidebar nav {
     border: none !important; }
   .sidebar nav, .sidebar .navbar {
     background-color: transparent !important; }
+    .sidebar nav .icon, .sidebar .navbar .icon {
+      font-size: 1.8em; }
   .sidebar .navbar-default .navbar-nav .active a {
     background-color: transparent;
     color: #999 !important;
@@ -82,7 +86,11 @@
       display: block; }
     .sidebar .navbar li {
       float: none;
-      display: block; }
+      display: block;
+      padding: 5px;
+      border-bottom: 1px #E7E7E7 solid; }
+      .sidebar .navbar li:hover {
+        background-color: #E7E7E7 !important; }
     .sidebar .navbar li a {
       padding-top: 12px;
       padding-bottom: 12px;
