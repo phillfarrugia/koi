@@ -13,7 +13,7 @@ nav.navbar.navbar-default.navbar-fixed(role='navigation')
 			a.navbar-brand(href='') koi.
 
 			<!-- Navbar Items Far Left -->
-		div.collapse.navbar-collapse(id='global-nav')
+		div.collapse.navbar-collapse
 			ul.nav.navbar-nav
 				li.active
 					a(href='#') Overview
@@ -29,13 +29,13 @@ nav.navbar.navbar-default.navbar-fixed(role='navigation')
 					a(href='#') Press
 
 			<!-- Navbar Items Far Right -->
-			ul.nav.navbar-nav.navbar-right
+			ul.nav.navbar-nav.navbar-right.form-group
 				li
-					a
-						button.btn.btn-default(type='button' data-toggle='modal' data-target='#login') Log in
+					button.btn.btn-default.navbar-btn(type='button' data-toggle='modal' data-target='#login') Log in
+					span &nbsp;
+					span &nbsp;
 				li
-					a
-						button.btn.btn-default(type='button' data-toggle='modal' data-target='#signup') Sign up
+					button.btn.btn-default.navbar-btn(type='button' data-toggle='modal' data-target='#signup') Sign up
 
 <!-- Login modal -->			
 div.modal.fade#login

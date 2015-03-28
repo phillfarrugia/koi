@@ -34,10 +34,16 @@
 				opacity: 1;
 			}
 
-			.btn-default {
+			.navbar-btn  {
 				background-color: $transparent;
 				border-color: $white;
+				font-family: $titillium;
+				opacity: 0.9;
 				color: $white;
+
+				&:hover {
+					opacity: 1;
+				}
 			}
 		}
 
