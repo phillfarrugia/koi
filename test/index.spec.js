@@ -74,8 +74,23 @@ describe('index', function() {
 			})
 		})
 
-		it('should error if user already exists');
-		it('should pass user onto the next request');
+		it('should error if user already exists', function(done) {
+			request
+			.post('/register')
+			.send(testUser)
+			.end(function(err, res) {
+				tryAgain();
+			})
+
+			function tryAgain() {
+				request
+				.post('/register')
+				.send(testUser)
+				.expect(500, function(err, res) {
+					done();
+				})
+			}
+		});	
 	})
 
 	context('login', function() {
@@ -91,7 +106,14 @@ describe('index', function() {
 			})
 		})
 
-		it('should handle an invalid POST request');
+		it('should handle an invalid POST request', function(done) {
+			request
+			.post('/login')
+			.send()
+			.expect(400, function(err, res) {
+				done();
+			})
+		});
 
 		it('should authenticate and redirect', function(done) {
 			request
@@ -102,7 +124,5 @@ describe('index', function() {
 				done();
 			})
 		})
-
-		it('should pass user onto the next request');
 	})
 })
