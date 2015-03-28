@@ -22,7 +22,7 @@ router.get('/', function (req, res, next) {
   });
 });
 
-if (features.development) {
+if (features.staging) {
 
 router.post('/login', passport.authenticate('local'), function(req, res, next) {
     res.redirect('/');
