@@ -16,7 +16,7 @@ router.get('/', function (req, res, next) {
   User.find(function (err, users) {
     if (err) return next(err);
         res.render('dashboard', {
-        title: 'Koi',
+        title: 'Koi | Dashboard',
         users: users
       });
   });
