@@ -24,12 +24,8 @@ router.get('/', function (req, res, next) {
 
 if (features.development) {
 
-router.post('/login', function(req, res, next) {
-  passport.authenticate('local', {
-    successRedirect: '/',
-    failureRedirect: '/login',
-    failureFlash: true
-  });
+router.post('/login', passport.authenticate('local'), function(req, res, next) {
+    res.redirect('/');
 });
 
 router.post('/register', function(req, res, next) {

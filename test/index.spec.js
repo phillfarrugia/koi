@@ -4,10 +4,14 @@ expect = require('chai').expect,
 app = require('../app.js'),
 request = require('supertest')(app),
 mongoose = require('mongoose'),
-clearDB = require('mocha-mongoose')(config.db),
+clearDB = require('mocha-mongoose')(config.db, { noClear: true }),
 User = mongoose.model('User');
 
 describe('index', function() {
+	var testUser = {
+			username: 'sample._Email@emailName.com',
+			password: 'tHi$isA_S@Mp7e+PaS$w0rD'
+	};
 
 	it('should load the page', function(done) {
 		request
@@ -20,29 +24,25 @@ describe('index', function() {
 	})
 
 	context('registration', function() {
-		var testUser = {
-			username: 'sample._Email@emailName.com',
-			password: 'tHi$isA_S@Mp7e+PaS$w0rD'
-		};
+
+		beforeEach(function(done) {
+			clearDB(done);
+		})
 
 		//TODO: Implement validation when you have time
 		it('should validate the email address')
 		it('should validate the password')
 
-		it('should handle a valid request from the registration form', function(done) {
+		it('should handle a valid POST request', function(done) {
 			request
 			.post('/register')
 			.send(testUser)
-			.expect(302) //redirect
 			.end(function(err, res) {
 				expect(res).to.exist;
 				expect(err).to.not.exist;
-				expect(res.headers.location).to.equal('/');
 				done();
 			})
 		})
-
-		it('should authenticate a new user')
 
 		it('should create a new user in the database', function(done) {
 			request
@@ -63,5 +63,46 @@ describe('index', function() {
 				})
 			})
 		})
+
+		it('should authenticate and redirect', function(done) {
+			request
+			.post('/register')
+			.send(testUser)
+			.expect(302, function(err, res) {
+				expect(res.headers.location).to.equal('/');
+				done();
+			})
+		})
+
+		it('should error if user already exists');
+		it('should pass user onto the next request');
+	})
+
+	context('login', function() {
+
+		it('should handle a valid POST request', function(done) { 
+			request
+			.post('/login')
+			.send(testUser)
+			.expect(302, function(err, res) {
+				expect(res).to.exist;
+				expect(err).to.not.exist;
+				done();
+			})
+		})
+
+		it('should handle an invalid POST request');
+
+		it('should authenticate and redirect', function(done) {
+			request
+			.post('/login')
+			.send(testUser)
+			.expect(302, function(err, res) {
+				expect(res.headers.location).to.equal('/');
+				done();
+			})
+		})
+
+		it('should pass user onto the next request');
 	})
 })
