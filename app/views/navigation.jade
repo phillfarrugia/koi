@@ -14,25 +14,34 @@ nav.navbar.navbar-default.navbar-fixed(role='navigation')
 
 		<!-- Navbar Items Far Left -->
 	div.collapse.navbar-collapse#global-nav
-		//- ul.nav.navbar-nav
-		//- 	li.active
-		//- 		a(href='#') Notification Icon
-		//- 	li
-		//- 		a(href='#') Our vision
-		//- 	li
-		//- 		a(href='#') Features
-		//- 	li
-		//- 		a(href='#') Pricing
-		//- 	li
-		//- 		a(href='#') Members
-		//- 	li
-		//- 		a(href='#') Press
+		ul.nav.navbar-nav
 
 		<!-- Navbar Items Far Right -->
 		ul.nav.navbar-nav.navbar-right
 			li.dropdown
-				a.dropdown-toggle(href='#' data-toggle='dropdown' role='button') Signed in as me@phillfarrugia.com
-					span.caret
+				a.dropdown-toggle(href='#' data-toggle='dropdown' role='button') 
+					i.icon.ion-ios-bell-outline
+				ul.dropdown-menu(role='menu')
+					li
+						a(href='#') Notification
+					li.divider
+					li
+						a(href='#') Notification
+					li.divider
+					li
+						a(href='#') Notification
+					li.divider
+					li
+						a(href='#') Notification
+					li.divider
+					li
+						a(href='#') Notification
+					li.divider
+					li
+						a(href='#') Notification
+			li.dropdown
+				a.dropdown-toggle(href='#' data-toggle='dropdown' role='button') 
+					i.icon.ion-ios-gear-outline
 				ul.dropdown-menu(role='menu')
 					li
 						a(href='#') Account

@@ -1,72 +1,94 @@
-/*
-Error: Invalid CSS after "(min-width: ": expected expression (e.g. 1px, bold), was "(max-width: 768..."
-        on line 92 of public/sass/main.scss
+@font-face {
+  font-family: "Alegreya";
+  font-style: normal;
+  font-weight: normal;
+  src: url("//fonts.gstatic.com/s/alegreya/v7/jvx_POxM6YeT6dBBhDfmuXYhjbSpvc47ee6xR_80Hnw.ttf") format("truetype"); }
+@font-face {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: normal;
+  src: url("//fonts.gstatic.com/s/titilliumweb/v4/7XUFZ5tgS-tD6QamInJTcbFJZbTbly0V4A-kMlrADXE.ttf") format("truetype"); }
+@font-face {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: normal;
+  src: url("//fonts.gstatic.com/s/muli/v7/FrmKYbbiMrxVeJO6lA8KEvesZW2xOQ-xsNqO47m55DA.ttf") format("truetype"); }
+#masthead {
+  background: url("https://unsplash.imgix.net/photo-1418226970361-9f1f7227d638?q=75&fm=jpg&s=4a5f190c7499eff6f7c77d88d8abf57e") no-repeat center center;
+  height: 100%; }
+  #masthead .navbar-default {
+    background-color: transparent;
+    border: none; }
+    #masthead .navbar-default .navbar-brand {
+      color: #fff;
+      font-family: "Alegreya", sans-serif;
+      font-weight: 200;
+      font-size: 1.4em; }
+    #masthead .navbar-default .navbar-nav li a {
+      color: #fff;
+      font-family: "Titillium Web", sans-serif;
+      opacity: 0.9; }
+      #masthead .navbar-default .navbar-nav li a:hover {
+        opacity: 1; }
+    #masthead .navbar-default .navbar-nav .active a {
+      color: #fff;
+      background-color: transparent;
+      opacity: 1; }
+    #masthead .navbar-default .navbar-nav .navbar-btn {
+      background-color: transparent;
+      border-color: #fff;
+      font-family: "Titillium Web", sans-serif;
+      opacity: 0.9;
+      color: #fff; }
+      #masthead .navbar-default .navbar-nav .navbar-btn:hover {
+        opacity: 1; }
+    #masthead .navbar-default .navbar-toggle {
+      background-color: transparent;
+      border: none; }
+      #masthead .navbar-default .navbar-toggle .icon-bar {
+        background-color: #fff; }
+    #masthead .navbar-default .navbar-collapse {
+      border: none;
+      box-shadow: none; }
 
-87: 		&:hover {
-88: 			background-color: transparent;
-89: 		}
-90: 	}
-91: 
-92: 	@media (min-width: $mobile) {
-93: 	  .navbar .navbar-collapse {
-94: 	    padding: 0;
-95: 	    max-height: none;
-96: 	  }
-97: 	  .navbar ul {
+.navbar {
+  margin-bottom: 0px !important; }
+  .navbar .icon {
+    font-size: 2em; }
 
-Backtrace:
-public/sass/main.scss:92
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/scss/parser.rb:1165:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/script/lexer.rb:221:in `expected!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/script/parser.rb:573:in `assert_expr'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/script/parser.rb:62:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/scss/parser.rb:1027:in `sass_script'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/scss/parser.rb:465:in `query_expr'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/scss/parser.rb:440:in `media_query'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/scss/parser.rb:406:in `media_query_list'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/scss/parser.rb:65:in `parse_media_query_list'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:511:in `visit_media'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:430:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/engine.rb:368:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/engine.rb:285:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/exec/sass_scss.rb:407:in `run'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/bin/sass:13:in `<top (required)>'
-/usr/bin/sass:23:in `load'
-/usr/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"(min-width: \": expected expression (e.g. 1px, bold), was \"(max-width: 768...\"\A         on line 92 of public/sass/main.scss\A \A 87: 		&:hover {\A 88: 			background-color: transparent;\A 89: 		}\A 90: 	}\A 91: \A 92: 	@media (min-width: $mobile) {\A 93: 	  .navbar .navbar-collapse {\A 94: 	    padding: 0;\A 95: 	    max-height: none;\A 96: 	  }\A 97: 	  .navbar ul {"; }
+.sidebar {
+  height: 100%;
+  background-color: #fff;
+  padding-top: 20px;
+  font-size: 400;
+  border-right: 1px #E7E7E7 solid; }
+  .sidebar nav {
+    border: none !important; }
+  .sidebar nav, .sidebar .navbar {
+    background-color: transparent !important; }
+  .sidebar .navbar-default .navbar-nav .active a {
+    background-color: transparent;
+    color: #999 !important;
+    opacity: 1; }
+    .sidebar .navbar-default .navbar-nav .active a:hover {
+      background-color: transparent; }
+  @media (min-width: 768px) {
+    .sidebar .navbar .navbar-collapse {
+      padding: 0;
+      max-height: none; }
+    .sidebar .navbar ul {
+      float: none; }
+    .sidebar .navbar ul:not {
+      display: block; }
+    .sidebar .navbar li {
+      float: none;
+      display: block; }
+    .sidebar .navbar li a {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      color: #999 !important;
+      opacity: 0.8; }
+      .sidebar .navbar li a:hover {
+        opacity: 1; } }
+
+/*# sourceMappingURL=main.css.map */
