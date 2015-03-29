@@ -51,14 +51,20 @@
       border: none;
       box-shadow: none; }
 
-.navbar {
-  margin-bottom: 0px !important; }
-  .navbar .icon {
+#global-nav {
+  margin-bottom: 0px !important;
+  border-radius: 0 !important; }
+  #global-nav ul li a {
+    line-height: inherit !important; }
+  #global-nav .icon {
     font-size: 2em; }
-  .navbar .navbar-brand, .navbar li a {
-    line-height: 30px !important; }
+  #global-nav .navbar-brand {
+    font-size: 2em;
+    font-family: "Alegreya", sans-serif;
+    height: 100% !important;
+    line-height: inherit !important; }
 
-.sidebar {
+#sidebar {
   height: 100%;
   background-color: #fff;
   padding-top: 20px;
@@ -66,41 +72,49 @@
   border-right: 1px #E7E7E7 solid;
   padding: 0px !important;
   margin: 0px !important; }
-  .sidebar nav {
+  #sidebar nav {
     border: none !important; }
-  .sidebar nav, .sidebar .navbar {
+  #sidebar nav, #sidebar .navbar {
     background-color: transparent !important; }
-    .sidebar nav .icon, .sidebar .navbar .icon {
+    #sidebar nav .icon, #sidebar .navbar .icon {
       font-size: 1.8em; }
-  .sidebar .nav-text, .sidebar .icon {
+  #sidebar .nav-text, #sidebar .icon {
     vertical-align: middle; }
-  .sidebar .navbar-default .navbar-nav .active a {
+  #sidebar .navbar-default .navbar-nav .active a {
     background-color: #9999;
     color: #999 !important;
     opacity: 1; }
-    .sidebar .navbar-default .navbar-nav .active a:hover {
+    #sidebar .navbar-default .navbar-nav .active a:hover {
       background-color: transparent; }
   @media (min-width: 768px) {
-    .sidebar .navbar .navbar-collapse {
+    #sidebar .navbar .navbar-collapse {
       padding: 0;
       max-height: none; }
-    .sidebar .navbar ul {
+    #sidebar .navbar ul {
       float: none; }
-    .sidebar .navbar ul:not {
+    #sidebar .navbar ul:not {
       display: block; }
-    .sidebar .navbar li {
+    #sidebar .navbar li {
       float: none;
       display: block;
       border-bottom: 1px #E7E7E7 solid; }
-      .sidebar .navbar li:hover {
+      #sidebar .navbar li .icon-view, #sidebar .navbar li .label-view {
+        display: inline-block;
+        vertical-align: middle; }
+      #sidebar .navbar li .icon-view {
+        width: 20%;
+        text-align: center !important; }
+      #sidebar .navbar li .label-view {
+        width: 80%; }
+      #sidebar .navbar li:hover {
         background-color: #E7E7E7 !important; }
-    .sidebar .navbar li a {
+    #sidebar .navbar li a {
       padding-top: 12px;
       padding-bottom: 12px;
       color: #999 !important;
       opacity: 0.8;
       padding: 15px; }
-      .sidebar .navbar li a:hover {
+      #sidebar .navbar li a:hover {
         opacity: 1; } }
 
 /*# sourceMappingURL=main.css.map */
