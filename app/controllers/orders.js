@@ -15,8 +15,8 @@ module.exports = function (app) {
 router.get('/', function (req, res, next) {
   User.find(function (err, users) {
     if (err) return next(err);
-        res.render('orders', {
-        title: 'Koi | Orders',
+        res.render('dashboard', {
+        title: 'Orders',
         users: users
       });
   });
