@@ -2,6 +2,7 @@ var express = require('express'),
   router = express.Router(),
   mongoose = require('mongoose'),
   User = mongoose.model('User'),
+  School = mongoose.model('School'),
   fflip = require('fflip'),
   features = fflip.userFeatures(process.env.NODE_ENV),
   passport = require('passport'),
@@ -32,14 +33,17 @@ router.get('/logout', function (req, res, next) {
 });
 
 router.post('/register', function(req, res, next) {
-  User.register(new User({ username : req.body.username }), req.body.password, function(err, user) {
-        if (err) {
-            return res.render('register', { user : user });
-        }
+  School.create({ name: req.body.schoolname }, function (err, school) {
+    if (err) handleError(err);
 
-        passport.authenticate('local')(req, res, function () {
+    User.register(new User({ username: req.body.username, _schoolId: school._id }, req.body.password, 
+      function(err, user) {
+        if (err) return res.render('register', { user: user });
+
+        passport.authenticate('local')(req, res, function() {
           res.redirect('/dashboard');
         });
-    });
-});
+    }));
+  });
+  });
 };

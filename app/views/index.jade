@@ -82,6 +82,10 @@ div.main#masthead
 					div.modal-body
 						form.form-horizontal(role='form' action='/register' method='post')
 							div.form-group
+								label.col-sm-2.control-label(for='schoolname') Name
+								div.col-sm-10
+									input.form-control#schoolname(type='text' name='schoolname' placeholder='Name')
+							div.form-group
 								label.col-sm-2.control-label(for='username') Email
 								div.col-sm-10
 									input.form-control#username(type='username' name='username' placeholder='Email')
