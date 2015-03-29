@@ -13,11 +13,11 @@ module.exports = function (app) {
 };
 
 router.get('/', function (req, res, next) {
-  User.find(function (err, users) {
+  User.findOne(function (err, user) {
     if (err) return next(err);
         res.render('dashboard', {
         title: 'Calendar',
-        users: users
+        user: user
       });
   });
 });

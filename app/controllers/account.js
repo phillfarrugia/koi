@@ -8,7 +8,7 @@ var express = require('express'),
 
 module.exports = function (app) {
   if (features.development) {
-    app.use('/account', router);
+    app.use('/stats', router);
   };
 };
 
@@ -16,7 +16,7 @@ router.get('/', function (req, res, next) {
   User.findOne(function (err, user) {
     if (err) return next(err);
         res.render('dashboard', {
-        title: 'Account',
+        title: 'Stats',
         user: user
       });
   });
