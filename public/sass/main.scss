@@ -68,6 +68,10 @@
 	.icon {
 		font-size: $xxx-large;
 	}
+
+	.navbar-brand, li a {
+		line-height: 30px !important;
+	}
 }
 
 .sidebar {
@@ -91,8 +95,12 @@
 		}
 	}
 
+	.nav-text, .icon {
+		vertical-align: middle;
+	}
+
 	.navbar-default .navbar-nav .active a {
-		background-color: transparent;
+		background-color: #9999;
 		color: #999 !important;
 	    opacity: 1;
 
@@ -118,7 +126,6 @@
 	  .navbar li {
 	    float: none;
 	    display: block;
-	    padding: 5px;
 	    border-bottom: 1px #E7E7E7 solid;
 
 	    &:hover {
@@ -131,6 +138,7 @@
 	    padding-bottom: 12px;
 	    color: #999 !important;
 	    opacity: 0.8;
+	    padding: 15px;
 
 	    &:hover {
 	    	opacity: 1;

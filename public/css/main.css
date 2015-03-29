@@ -55,6 +55,8 @@
   margin-bottom: 0px !important; }
   .navbar .icon {
     font-size: 2em; }
+  .navbar .navbar-brand, .navbar li a {
+    line-height: 30px !important; }
 
 .sidebar {
   height: 100%;
@@ -70,8 +72,10 @@
     background-color: transparent !important; }
     .sidebar nav .icon, .sidebar .navbar .icon {
       font-size: 1.8em; }
+  .sidebar .nav-text, .sidebar .icon {
+    vertical-align: middle; }
   .sidebar .navbar-default .navbar-nav .active a {
-    background-color: transparent;
+    background-color: #9999;
     color: #999 !important;
     opacity: 1; }
     .sidebar .navbar-default .navbar-nav .active a:hover {
@@ -87,7 +91,6 @@
     .sidebar .navbar li {
       float: none;
       display: block;
-      padding: 5px;
       border-bottom: 1px #E7E7E7 solid; }
       .sidebar .navbar li:hover {
         background-color: #E7E7E7 !important; }
@@ -95,7 +98,8 @@
       padding-top: 12px;
       padding-bottom: 12px;
       color: #999 !important;
-      opacity: 0.8; }
+      opacity: 0.8;
+      padding: 15px; }
       .sidebar .navbar li a:hover {
         opacity: 1; } }
 
