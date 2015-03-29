@@ -33,12 +33,14 @@
 				opacity: 1;
 			}
 
-			.navbar-btn  {
+			.navbar-btn {
 				background-color: transparent;
 				border-color: $white;
 				font-family: $titillium;
 				opacity: 0.9;
 				color: $white;
+				padding-top: 6px;
+				padding-bottom: 6px;
 
 				&:hover {
 					opacity: 1;

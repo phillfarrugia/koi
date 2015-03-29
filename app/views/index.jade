@@ -34,12 +34,18 @@ div.main#masthead
 
 					<!-- Navbar Items Far Right -->
 					ul.nav.navbar-nav.navbar-right.form-group
-						li
-							button.btn.btn-default.navbar-btn(type='button' data-toggle='modal' data-target='#login') Log in
-							span &nbsp;
-							span &nbsp;
-						li
-							button.btn.btn-default.navbar-btn(type='button' data-toggle='modal' data-target='#signup') Sign up
+						if user
+							li
+								a(href='./dashboard') #{user.username}
+							li
+								a(href='./logout').btn.btn-default.navbar-btn(role='button') Log out
+						else	
+							li
+								button.btn.btn-default.navbar-btn(type='button' data-toggle='modal' data-target='#login') Log in
+								span &nbsp;
+								span &nbsp;
+							li
+								button.btn.btn-default.navbar-btn(type='button' data-toggle='modal' data-target='#signup') Sign up
 
 		<!-- Login modal -->			
 		div.modal.fade#login

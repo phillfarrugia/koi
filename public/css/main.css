@@ -39,7 +39,9 @@
       border-color: #fff;
       font-family: "Titillium Web", sans-serif;
       opacity: 0.9;
-      color: #fff; }
+      color: #fff;
+      padding-top: 6px;
+      padding-bottom: 6px; }
       #masthead .navbar-default .navbar-nav .navbar-btn:hover {
         opacity: 1; }
     #masthead .navbar-default .navbar-toggle {
