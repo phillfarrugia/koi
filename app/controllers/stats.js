@@ -8,16 +8,13 @@ var express = require('express'),
 
 module.exports = function (app) {
   if (features.development) {
-    app.use('/stats', router);
+    app.use('/account', router);
   };
 };
 
 router.get('/', function (req, res, next) {
-  User.find(function (err, users) {
-    if (err) return next(err);
-        res.render('dashboard', {
-        title: 'Stats',
-        users: users
-      });
-  });
+    res.render('dashboard', {
+      title: 'Stats',
+      user: req.user
+    });
 });

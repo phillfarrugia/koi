@@ -4,7 +4,8 @@ var express = require('express'),
   User = mongoose.model('User'),
   fflip = require('fflip'),
   features = fflip.userFeatures(process.env.NODE_ENV),
-  passport = require('passport');
+  passport = require('passport'),
+  session = require('express-session');
 
 module.exports = function (app) {
   if (features.production) {
@@ -13,19 +14,21 @@ module.exports = function (app) {
 };
 
 router.get('/', function (req, res, next) {
-  User.find(function (err, users) {
-    if (err) return next(err);
-        res.render('index', {
-        title: 'Koi',
-        users: users
-      });
-  });
+    res.render('index', {
+      title: 'Koi',
+      user: req.user
+    });
 });
 
 if (features.staging) {
 
 router.post('/login', passport.authenticate('local'), function(req, res, next) {
-    res.redirect('/');
+    res.redirect('/dashboard');
+});
+
+router.get('/logout', function (req, res, next) {
+  req.logout();
+  res.redirect('/');
 });
 
 router.post('/register', function(req, res, next) {
@@ -35,9 +38,8 @@ router.post('/register', function(req, res, next) {
         }
 
         passport.authenticate('local')(req, res, function () {
-          res.redirect('/');
+          res.redirect('/dashboard');
         });
     });
 });
-
 };

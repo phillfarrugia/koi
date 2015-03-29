@@ -39,7 +39,9 @@
       border-color: #fff;
       font-family: "Titillium Web", sans-serif;
       opacity: 0.9;
-      color: #fff; }
+      color: #fff;
+      padding-top: 6px;
+      padding-bottom: 6px; }
       #masthead .navbar-default .navbar-nav .navbar-btn:hover {
         opacity: 1; }
     #masthead .navbar-default .navbar-toggle {
@@ -54,15 +56,14 @@
 #global-nav {
   margin-bottom: 0px !important;
   border-radius: 0 !important; }
-  #global-nav ul li a {
-    line-height: inherit !important; }
+  #global-nav ul li a, #global-nav .navbar-brand {
+    line-height: inherit !important;
+    height: 100% !important; }
   #global-nav .icon {
     font-size: 2em; }
   #global-nav .navbar-brand {
     font-size: 2em;
-    font-family: "Alegreya", sans-serif;
-    height: 100% !important;
-    line-height: inherit !important; }
+    font-family: "Alegreya", sans-serif; }
 
 #sidebar {
   height: 100%;

@@ -13,11 +13,8 @@ module.exports = function (app) {
 };
 
 router.get('/', function (req, res, next) {
-  User.find(function (err, users) {
-    if (err) return next(err);
-        res.render('dashboard', {
-        title: 'Inventory',
-        users: users
-      });
-  });
+    res.render('dashboard', {
+      title: 'Inventory',
+      user: req.user
+    });
 });

@@ -33,12 +33,14 @@
 				opacity: 1;
 			}
 
-			.navbar-btn  {
+			.navbar-btn {
 				background-color: transparent;
 				border-color: $white;
 				font-family: $titillium;
 				opacity: 0.9;
 				color: $white;
+				padding-top: 6px;
+				padding-bottom: 6px;
 
 				&:hover {
 					opacity: 1;
@@ -66,8 +68,9 @@
 	margin-bottom: 0px !important;
 	border-radius: 0 !important;
 
-		ul li a {
+		ul li a, .navbar-brand {
 			line-height: inherit !important;
+			height: 100% !important;
 		}
 
 		.icon {
@@ -77,8 +80,6 @@
 		.navbar-brand {
 			font-size: $xxx-large;
 			font-family: $alegreya;
-			height: 100% !important;
-			line-height: inherit !important;
 		}
 }
 

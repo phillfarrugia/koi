@@ -69,7 +69,7 @@ describe('index', function() {
 			.post('/register')
 			.send(testUser)
 			.expect(302, function(err, res) {
-				expect(res.headers.location).to.equal('/');
+				expect(res.headers.location).to.equal('/dashboard');
 				done();
 			})
 		})
@@ -120,7 +120,7 @@ describe('index', function() {
 			.post('/login')
 			.send(testUser)
 			.expect(302, function(err, res) {
-				expect(res.headers.location).to.equal('/');
+				expect(res.headers.location).to.equal('/dashboard');
 				done();
 			})
 		})
