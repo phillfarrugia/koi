@@ -5,10 +5,12 @@ app = require('../app.js'),
 request = require('supertest')(app),
 mongoose = require('mongoose'),
 clearDB = require('mocha-mongoose')(config.db, { noClear: true }),
-User = mongoose.model('User');
+User = mongoose.model('User'),
+School = mongoose.model('School');
 
 describe('index', function() {
 	var testUser = {
+			schoolname: 'St. Pauls Catholic College',
 			username: 'sample._Email@emailName.com',
 			password: 'tHi$isA_S@Mp7e+PaS$w0rD'
 	};
@@ -20,8 +22,8 @@ describe('index', function() {
 		.end(function(err, res) {
 			expect(res).to.exist;
 			done();
-		})
-	})
+		});
+	});
 
 	context('registration', function() {
 
@@ -41,8 +43,26 @@ describe('index', function() {
 				expect(res).to.exist;
 				expect(err).to.not.exist;
 				done();
-			})
-		})
+			});
+		});
+
+		it('should create a new school in the database', function(done) {
+			request
+			.post('/register')
+			.send(testUser)
+			.end(function(err, res) {
+				School.find({}, function(err, schools) {
+					var school = schools[0];
+
+					expect(err).to.not.exist;
+					expect(schools).to.have.length(1);
+
+					expect(school.name).to.equal(testUser.schoolname);
+					expect(school._id).to.exist;
+					done();
+				});
+			});
+		});
 
 		it('should create a new user in the database', function(done) {
 			request
@@ -60,9 +80,25 @@ describe('index', function() {
 					expect(user.salt).to.exist;
 					expect(user.hash).to.exist;
 					done();
-				})
-			})
-		})
+				});
+			});
+		});
+
+		it('should reference the school from the user in the database', function(done) {
+			request
+			.post('/register')
+			.send(testUser)
+			.end(function(err, res) {
+				User.findOne({ 'username': testUser.username }, function(err, user) {
+					expect(user._schoolId).to.exist;
+
+					School.findOne({}, function(err, school) {
+						expect(user._schoolId.toString()).to.equal(school._id.toString());
+						done();
+					});
+				});
+			});
+		});
 
 		it('should authenticate and redirect', function(done) {
 			request
@@ -71,8 +107,8 @@ describe('index', function() {
 			.expect(302, function(err, res) {
 				expect(res.headers.location).to.equal('/dashboard');
 				done();
-			})
-		})
+			});
+		});
 
 		it('should error if user already exists', function(done) {
 			request
@@ -91,7 +127,7 @@ describe('index', function() {
 				})
 			}
 		});	
-	})
+	});
 
 	context('login', function() {
 
