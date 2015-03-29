@@ -8,13 +8,13 @@ var express = require('express'),
 
 module.exports = function (app) {
   if (features.development) {
-    app.use('/stats', router);
+    app.use('/account', router);
   };
 };
 
 router.get('/', function (req, res, next) {
     res.render('dashboard', {
-      title: 'Stats',
+      title: 'Account',
       user: req.user
     });
 });
