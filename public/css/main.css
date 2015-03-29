@@ -117,4 +117,11 @@
       #sidebar .navbar li a:hover {
         opacity: 1; } }
 
+#main {
+  height: 100%; }
+  #main p {
+    text-align: center;
+    margin-top: 50%;
+    color: #999; }
+
 /*# sourceMappingURL=main.css.map */
