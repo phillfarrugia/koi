@@ -1,84 +1,183 @@
-//TODO: Better way of importing Sass mixins?
-@import '../components/sass-web-fonts/_web-fonts.scss';
-@include web-fonts('Titillium Web');
-@include web-fonts('Alegreya');
-@include web-fonts('Muli');
-
-$hero: 'https://unsplash.imgix.net/photo-1418226970361-9f1f7227d638?q=75&fm=jpg&s=4a5f190c7499eff6f7c77d88d8abf57e';
-
-// Font Faces
-$titillium:	'Titillium Web', sans-serif;
-$alegreya: 'Alegreya', sans-serif;
-$merriweather: 'Muli', sans-serif;
-
-// Font Sizes
-$xxx-large: 2em;
-$xx-large: 1.8em;
-$x-large: 1.4em;
-$large: 1.1em;
-$medium: 1em;
-$small: 0.8em;
-$x-small: 0.6em;
-
-// Font Weights
-$ultra-thin: 200;
-$thin: 300;
-$medium: 400;
-$thick: 500;
-$ultra-thick: 600;
-
-body {
-
-}
+@import "constants.scss";
+@import "convenience.scss";
 
 #masthead {
-	background-image: url($hero);
-	background-size: cover;
-	background-position: right bottom;
-	height: 48em;
+	background: url($header-background) no-repeat center center;
+	height: 100%;
 
-	nav {
-		background: none;
+	.navbar-default {
+		background-color: transparent;
 		border: none;
 
-		.navbar-brand, a, .active {
+		.navbar-brand {
+			color: $white;
+			font-family: $alegreya;
+			font-weight: $ultra-thin;
+			font-size: $x-large;
+		}
+
+		.navbar-nav {
+			li a {
+				color: $white;
+				font-family: $titillium;
+				opacity: 0.9;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+
+			.active a {
+				color: $white;
+				background-color: transparent;
+				opacity: 1;
+			}
+
+			.navbar-btn {
+				background-color: transparent;
+				border-color: $white;
+				font-family: $titillium;
+				opacity: 0.9;
+				color: $white;
+				padding-top: 6px;
+				padding-bottom: 6px;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+
+		.navbar-toggle {
 			background-color: transparent;
-			color: #fff;
+			border: none;
+		
+			.icon-bar {
+				background-color: $white;
+			}
+		}
+
+		.navbar-collapse {
+			border: none;
+			box-shadow: none;
+		}
+	}
+}
+
+#global-nav {
+	margin-bottom: 0px !important;
+	border-radius: 0 !important;
+
+		ul li a, .navbar-brand {
+			line-height: inherit !important;
+			height: 100% !important;
+		}
+
+		.icon {
+			font-size: $xxx-large;
 		}
 
 		.navbar-brand {
+			font-size: $xxx-large;
 			font-family: $alegreya;
-			font-size: $x-large; 
-			font-weight: $ultra-thin;
 		}
+}
 
-		ul li {
-			opacity: 0.6;
-		}
+#sidebar {
+	height: 100%;
+	background-color: $white;
+	padding-top: 20px;
+	font-size: $medium;
+	border-right: 1px #E7E7E7 solid;
+	padding: 0px !important;
+	margin: 0px !important;
 
-		ul li:hover, .active {
-			opacity: 1;
-		}
-
-		ul li {
-			font-family: $titillium;
-			font-size: $large;
-			font-weight: $thick;
-		}
-
+	nav {
+		border: none !important;
 	}
 
-	.img-responsive {
-		padding-top: 10px;
+	nav, .navbar {
+		background-color: transparent !important;
+
+		.icon {
+			font-size: $xx-large;
+		}
+	}
+
+	.nav-text, .icon {
+		vertical-align: middle;
+	}
+
+	.navbar-default .navbar-nav .active a {
+		background-color: #9999;
+		color: #999 !important;
+	    opacity: 1;
+
+		&:hover {
+			background-color: transparent;
+		}
+	}
+
+	@media (min-width: 768px) {
+	  .navbar .navbar-collapse {
+	    padding: 0;
+	    max-height: none;
+	  }
+
+	  .navbar ul {
+	    float: none;
+	  }
+
+	  .navbar ul:not {
+	    display: block;
+	  }
+
+	  .navbar li {
+	    float: none;
+	    display: block;
+	    border-bottom: 1px #E7E7E7 solid;
+
+	    .icon-view, .label-view {
+	    	display: inline-block;
+	    	vertical-align: middle;
+	    }
+
+	    .icon-view {
+	    	width: 20%;
+	    	text-align: center !important;
+	    }
+
+	    .label-view {
+	    	width: 80%;
+	    }
+
+	    &:hover {
+	    	background-color: #E7E7E7 !important;
+	    }
+	  }
+
+	  .navbar li a {
+	    padding-top: 12px;
+	    padding-bottom: 12px;
+	    color: #999 !important;
+	    opacity: 0.8;
+	    padding: 15px;
+
+	    &:hover {
+	    	opacity: 1;
+	    }
+	  }
 	}
 }
 
-#hero {
-	background-image: url($hero);
-	background-size: cover;
-	background-position: right bottom;
+#main {
+	height: 100%;
 
-	h1, p {
-		color: #fff;
+	//TODO: Temporary placeholder for empty views
+	p {
+		text-align: center;
+		margin-top: 50%;
+		color: #999;
 	}
 }
+

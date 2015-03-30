@@ -40,9 +40,7 @@ module.exports = function(app, config) {
   // Configure passport middleware
   var User = require('../app/models/user');
 
-  passport.use(User.createStrategy({
-    usernameField: 'email'
-  }));
+  passport.use(User.createStrategy());
   passport.serializeUser(User.serializeUser());
   passport.deserializeUser(User.deserializeUser());
 

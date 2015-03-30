@@ -1,0 +1,5 @@
+@mixin vertical-align {
+	position: relative;
+	top: 15%;
+	transform: translateY(-25%);
+}

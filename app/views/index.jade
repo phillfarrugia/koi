@@ -1,8 +1,120 @@
 include layout
 
-div#masthead
-	include navigation
-	div.col-md-8.col-md-offset-2
-		img.img-responsive(src='http://i.imgur.com/zJbHEUL.png')
+div.main#masthead
+	section
+		<!-- Global Navigation Bar -->
+		nav.navbar.navbar-default.navbar-fixed(role='navigation')
+			div.container
+				div.navbar-header
+
+					<!-- Hamburger Menu -->
+					button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#global-nav')
+						span.sr-only
+							Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href='') koi.
+
+					<!-- Navbar Items Far Left -->
+				div.collapse.navbar-collapse
+					ul.nav.navbar-nav
+						li.active
+							a(href='#') Overview
+						li
+							a(href='#') Our vision
+						li
+							a(href='#') Features
+						li
+							a(href='#') Pricing
+						li
+							a(href='#') Members
+						li
+							a(href='#') Press
+
+					<!-- Navbar Items Far Right -->
+					ul.nav.navbar-nav.navbar-right.form-group
+						if user
+							li
+								a(href='./dashboard') #{user.username}
+							li
+								a(href='./logout' role='button').btn.btn-default.navbar-btn Log out
+						else	
+							li
+								button.btn.btn-default.navbar-btn(type='button' data-toggle='modal' data-target='#login') Log in
+								span &nbsp;
+								span &nbsp;
+							li
+								button.btn.btn-default.navbar-btn(type='button' data-toggle='modal' data-target='#signup') Sign up
+
+		<!-- Login modal -->			
+		div.modal.fade#login
+			div.modal-dialog
+				div.modal-content
+					div.modal-header
+						button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+							span(aria-hidden='true') &times;
+						h4.modal-title Login
+					div.modal-body
+						form.form-horizontal(role='form' action='/login' method='post')
+							div.form-group
+								label.col-sm-2.control-label(for='username') Email
+								div.col-sm-10
+									input.form-control#username(type='username' name='username' placeholder='Email')
+							div.form-group
+								label.col-sm-2.control-label(for='password') Password
+								div.col-sm-10
+									input.form-control#password(type='password' name='password' placeholder='Password')
+							div.form-group
+								div.col-sm-offset-2.col-sm-10
+									button.btn.btn-default(type='submit') Sign in 
+									span &nbsp;
+									button.btn.btn-danger(type='button' data-dismiss='modal') Cancel
+
+		<!-- Sign up modal -->			
+		div.modal.fade#signup
+			div.modal-dialog
+				div.modal-content
+					div.modal-header
+						button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+							span(aria-hidden='true') &times;
+						h4.modal-title Sign up
+					div.modal-body
+						form.form-horizontal(role='form' action='/register' method='post')
+							div.form-group
+								label.col-sm-2.control-label(for='schoolname') Name
+								div.col-sm-10
+									input.form-control#schoolname(type='text' name='schoolname' placeholder='Name')
+							div.form-group
+								label.col-sm-2.control-label(for='username') Email
+								div.col-sm-10
+									input.form-control#username(type='username' name='username' placeholder='Email')
+							div.form-group
+								label.col-sm-2.control-label(for='password') Password
+								div.col-sm-10
+									input.form-control#password(type='password' name='password' placeholder='Password')
+							div.form-group
+								div.col-sm-offset-2.col-sm-10
+									button.btn.btn-default(type='submit') Sign up 
+									span &nbsp;
+									button.btn.btn-danger(type='button' data-dismiss='modal') Cancel
+		div.container
+			div.row
+				div.col-xs-12#iphone
+					img.center-block(src='http://i.imgur.com/zJbHEUL.png' width='323px' height='649px')
+				//
+					div.col-xs-12.col-lg-4#headline
+					h1 Headline.
+					p.lead 
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						| Donec ac venenatis eros. Suspendisse suscipit massa quis
+						| massa accumsan porttitor. Ut efficitur cursus gravida.
+	section
+		p Test
+	section
+		p Test
+	section
+		p Test
 
 block content
+	script(src='/js/onepage-scroll.js')

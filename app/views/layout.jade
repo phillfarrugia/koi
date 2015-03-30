@@ -3,14 +3,13 @@ html(lang='en')
 	head
 		meta(charset='UTF-8')
 		meta(name='viewport', content='width=device-width')
-		title= title
+		title= 'Koi | ' + title
 		block css
 			link(rel='stylesheet', href='/css/main.min.css')
 			link(rel='stylesheet', href='/css/bower.min.css')
 		block js
 			script(src='/js/bower.min.js')
 	body
-			
 		block content
 
 	script(src='//localhost:35729/livereload.js')

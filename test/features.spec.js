@@ -3,35 +3,46 @@ features = require('../config/features'),
 fflip = require('fflip');
 
 describe('feature flags', function() {
-	describe('when development', function() {
+	describe('undefined', function() {
+		it('should meet the development critera', function() {
+			var Features = fflip.userFeatures(undefined);
+
+			// all features visible in development
+			assert.equal(Features.development, true);
+			assert.equal(Features.staging, true);
+			assert.equal(Features.production, true);
+		})
+	})
+
+	describe('development', function() {
 		it('should meet the development critera', function() {
 			var Features = fflip.userFeatures('development');
 
 			// all features visible in development
 			assert.equal(Features.development, true);
-			assert.equal(Features.test, true);
+			assert.equal(Features.staging, true);
 			assert.equal(Features.production, true);
 		})
 	})
 
-	describe('when test', function() {
-		it('should meet the test criteria', function() {
-			var Features = fflip.userFeatures('test');
+	describe('staging', function() {
+		it('should meet the staging criteria', function() {
+			var Features = fflip.userFeatures('staging');
 
 			// only test and production visible in test
 			assert.equal(Features.development, false);
-			assert.equal(Features.test, true);
+			assert.equal(Features.staging, true);
 			assert.equal(Features.production, true);
 		})
 	})
 
-	describe('when production', function() {
+	describe('production', function() {
 		it('should meet the production criteria', function() {
 			var Features = fflip.userFeatures('production');
 
 			// only production visible in production
 			assert.equal(Features.development, false);
-			assert.equal(Features.test, false);
+			assert.equal(Features.staging, false);
 			assert.equal(Features.production, true);
 		})
 	})

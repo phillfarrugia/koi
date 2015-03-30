@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Alegreya";
+  font-style: normal;
+  font-weight: normal;
+  src: url("//fonts.gstatic.com/s/alegreya/v7/jvx_POxM6YeT6dBBhDfmuXYhjbSpvc47ee6xR_80Hnw.ttf") format("truetype"); }
+@font-face {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: normal;
+  src: url("//fonts.gstatic.com/s/titilliumweb/v4/7XUFZ5tgS-tD6QamInJTcbFJZbTbly0V4A-kMlrADXE.ttf") format("truetype"); }
+@font-face {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: normal;
+  src: url("//fonts.gstatic.com/s/muli/v7/FrmKYbbiMrxVeJO6lA8KEvesZW2xOQ-xsNqO47m55DA.ttf") format("truetype"); }
+
+/*# sourceMappingURL=constants.css.map */

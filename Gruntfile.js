@@ -1,4 +1,4 @@
-'use strict';
+
 
 var request = require('request');
 
@@ -55,8 +55,10 @@ module.exports = function (grunt) {
         dest: 'public/js/bower.js',
         cssDest: 'public/css/bower.css',
         exclude: [
-          'sass-web-fonts'
-        ]
+          'sass-web-fonts',
+          'bourbon'
+        ],
+        mainFiles: ['../components/bourbon/app/assets/stylesheets/_bourbon.scss']
       }
     },
 
@@ -87,14 +89,46 @@ module.exports = function (grunt) {
     sass: {
       dist: {
         files: [{
-        expand: true,
-        cwd: 'public/sass',
-        src: ['*.scss'],
-        dest: 'public/css',
-        ext: '.css'
-      }]
+          expand: true,
+          cwd: 'public/sass',
+          src: ['*.scss'],
+          dest: 'public/css',
+          ext: '.css'
+        }]
+      }
+    },
+
+    mocha_istanbul: {
+      coverage: {
+        src: 'test',
+        options: {
+          mask: '*.spec.js'
+        }
+      },
+      coveralls: {
+        src: ['test'],
+        options: {
+          coverage: true,
+          check: {
+            lines: 75,
+            statements: 75
+          },
+          root: './',
+          reportFormats: ['cobertura', 'lcovonly', 'html']
+        }
+      }
+    },
+    istanbul_check_coverage: {
+      default: {
+        options: {
+          coverageFolder: 'coverage*',
+          check: {
+            lines: 80,
+            statements: 80
+          }
+        }
+      }
     }
-  }
   });
 
   grunt.config.requires('watch.js.files');
@@ -114,6 +148,19 @@ module.exports = function (grunt) {
         });
     }, 500);
   });
+
+  grunt.event.on('coverage', function(lcov, done){
+      require('coveralls').handleInput(lcov, function(err){
+          if (err) {
+              return done(err);
+          }
+          console.log('Sending coverage to coveralls');
+          done();
+      });
+  });
+
+  grunt.registerTask('coveralls', ['mocha_istanbul:coveralls']);
+  grunt.registerTask('coverage', ['mocha_istanbul:coverage']);
 
   grunt.registerTask('build', [
     'bower_concat',
