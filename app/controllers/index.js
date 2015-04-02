@@ -7,8 +7,7 @@ var express = require('express'),
   session = require('express-session');
 
 var User = mongoose.model('User'),
-  School = mongoose.model('School'),
-  Menu = mongoose.model('Menu');
+  School = mongoose.model('School');
 
 module.exports = function (app) {
   if (features.production) {
@@ -45,8 +44,6 @@ router.post('/register', function(req, res, next) {
           res.redirect('/dashboard');
         });
     });
-
-    Menu.create(new Menu({ _schoolId: school.id }));
   });
 });
 
