@@ -1,6 +1,10 @@
 @import "constants.scss";
 @import "convenience.scss";
 
+body {
+	overflow: scroll !important;
+}
+
 #masthead {
 	background: url($header-background) no-repeat center center;
 	height: 100%;
@@ -171,7 +175,7 @@
 }
 
 #main {
-	height: 100%;
+	
 }
 
 #top {
