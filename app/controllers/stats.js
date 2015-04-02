@@ -8,7 +8,7 @@ var express = require('express'),
 
 module.exports = function (app) {
   if (features.development) {
-    app.use('/account', router);
+    app.use('/stats', router);
   };
 };
 
