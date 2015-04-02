@@ -1,12 +1,14 @@
 var express = require('express'),
   router = express.Router(),
   mongoose = require('mongoose'),
-  User = mongoose.model('User'),
-  School = mongoose.model('School'),
   fflip = require('fflip'),
   features = fflip.userFeatures(process.env.NODE_ENV),
   passport = require('passport'),
   session = require('express-session');
+
+var User = mongoose.model('User'),
+  School = mongoose.model('School'),
+  Menu = mongoose.model('Menu');
 
 module.exports = function (app) {
   if (features.production) {
@@ -43,6 +45,8 @@ router.post('/register', function(req, res, next) {
           res.redirect('/dashboard');
         });
     });
+
+    Menu.create(new Menu({ _schoolId: school.id }));
   });
 });
 
