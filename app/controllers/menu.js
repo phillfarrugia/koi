@@ -13,7 +13,7 @@ module.exports = function (app) {
 };
 
 router.get('/', function (req, res, next) {
-    res.render('dashboard', {
+    res.render('menu', {
       title: 'Menu',
       user: req.user
     });

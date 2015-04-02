@@ -14,7 +14,8 @@ var ProductSchema = new Schema({
   	title: String,
   	description: String,
   	price: Number,
-  	available: Boolean
+  	available: Boolean,
+  	img: String
 });
 
 module.exports = mongoose.model('Product', ProductSchema);

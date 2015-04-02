@@ -120,9 +120,12 @@
 
 #main {
   height: 100%; }
-  #main p {
-    text-align: center;
-    margin-top: 50%;
-    color: #999; }
+
+#top {
+  height: 100px;
+  margin: 20px; }
+
+#left, #right {
+  margin: 20px; }
 
 /*# sourceMappingURL=main.css.map */

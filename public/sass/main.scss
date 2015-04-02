@@ -172,12 +172,13 @@
 
 #main {
 	height: 100%;
-
-	//TODO: Temporary placeholder for empty views
-	p {
-		text-align: center;
-		margin-top: 50%;
-		color: #999;
-	}
 }
 
+#top {
+	height: 100px;
+	margin: 20px;
+}
+
+#left, #right {
+	margin: 20px;
+}
