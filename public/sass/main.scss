@@ -69,21 +69,21 @@ body {
 }
 
 #global-nav {
-	margin-bottom: 0px !important;
-	border-radius: 0 !important;
-
-		ul li a, .navbar-brand {
-			line-height: inherit !important;
-			height: 100% !important;
-		}
+	margin: 0;
+	border-radius: 0;
 
 		.icon {
-			font-size: $xxx-large;
+			font-size: $xx-large;
 		}
 
 		.navbar-brand {
-			font-size: $xxx-large;
+			font-size: $xx-large;
 			font-family: $alegreya;
+			line-height: 100%;
+		}
+
+		.navbar-toggle {
+			margin-top: 12px;
 		}
 }
 

@@ -57,16 +57,16 @@ body {
       box-shadow: none; }
 
 #global-nav {
-  margin-bottom: 0px !important;
-  border-radius: 0 !important; }
-  #global-nav ul li a, #global-nav .navbar-brand {
-    line-height: inherit !important;
-    height: 100% !important; }
+  margin: 0;
+  border-radius: 0; }
   #global-nav .icon {
-    font-size: 2em; }
+    font-size: 1.8em; }
   #global-nav .navbar-brand {
-    font-size: 2em;
-    font-family: "Alegreya", sans-serif; }
+    font-size: 1.8em;
+    font-family: "Alegreya", sans-serif;
+    line-height: 100%; }
+  #global-nav .navbar-toggle {
+    margin-top: 12px; }
 
 #sidebar {
   height: 100%;
