@@ -72,14 +72,14 @@ body {
 	margin: 0;
 	border-radius: 0;
 
-		.icon {
-			font-size: $xx-large;
-		}
-
 		.navbar-brand {
 			font-size: $xx-large;
 			font-family: $alegreya;
 			line-height: 100%;
+		}
+
+		.icon {
+			font-size: $xx-large;
 		}
 
 		.navbar-toggle {
