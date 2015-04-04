@@ -15,6 +15,12 @@ module.exports = function (app) {
   };
 };
 
+/*
+ *  Path: '/'
+ *  HTTP: GET
+ *  Description: Loads the application landing
+ *  page.
+ */
 router.get('/', function (req, res, next) {
     res.render('index', {
       title: 'Home',
@@ -24,15 +30,33 @@ router.get('/', function (req, res, next) {
 
 if (features.staging) {
 
+/*
+ *  Path: '/login'
+ *  HTTP: POST
+ *  Description: Send POST requests
+ *  to this path to authenticate a User
+ */
 router.post('/login', passport.authenticate('local'), function(req, res, next) {
     res.redirect('/dashboard');
 });
 
+/*
+ *  Path: '/logout'
+ *  HTTP: GET
+ *  Description: Send a GET request
+ *  to this path to logout from a session
+ */
 router.get('/logout', function (req, res, next) {
   req.logout();
   res.redirect('/');
 });
 
+/*
+ *  Path: '/register'
+ *  HTTP: POST
+ *  Description: Send a POST request
+ *  to this path to create a new User
+ */
 router.post('/register', function(req, res, next) {
   School.create({ name: req.body.schoolname }, function (err, school) {
     if (err) return handleError(err);

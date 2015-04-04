@@ -12,6 +12,12 @@ module.exports = function (app) {
   };
 };
 
+/*
+ *  Path: '/stats/*'
+ *  HTTP: All
+ *  Description: Require authentication on
+ *  all requests beneath this layer
+ */
 router.all('/', function (req, res, next) {
   if (!req.user) {
     res.redirect('../');
@@ -19,6 +25,12 @@ router.all('/', function (req, res, next) {
   next();
 });
 
+/*
+ *  Path: '/stats'
+ *  HTTP: GET
+ *  Description: Loads the logged in user's
+ *  admin stats view
+ */
 router.get('/', function (req, res, next) {
     res.render('dashboard', {
       title: 'Stats',

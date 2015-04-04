@@ -26,7 +26,7 @@ router.all('/', function (req, res, next) {
 });
 
 /*
- *  Path: '/accoutn'
+ *  Path: '/account'
  *  HTTP: GET
  *  Description: Loads the logged in user's
  *  admin dashboard view
