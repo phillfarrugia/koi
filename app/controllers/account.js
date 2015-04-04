@@ -12,6 +12,25 @@ module.exports = function (app) {
   };
 };
 
+/*
+ *  Path: '/account/*'
+ *  HTTP: All
+ *  Description: Require authentication on
+ *  all requests beneath this layer
+ */
+router.all('/', function (req, res, next) {
+  if (!req.user) {
+    res.redirect('../');
+  }
+  next();
+});
+
+/*
+ *  Path: '/accoutn'
+ *  HTTP: GET
+ *  Description: Loads the logged in user's
+ *  admin dashboard view
+ */
 router.get('/', function (req, res, next) {
     res.render('dashboard', {
       title: 'Account',

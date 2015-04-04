@@ -12,6 +12,13 @@ module.exports = function (app) {
   };
 };
 
+router.all('/', function (req, res, next) {
+  if (!req.user) {
+    res.redirect('../');
+  }
+  next();
+});
+
 router.get('/', function (req, res, next) {
     res.render('dashboard', {
       title: 'Staff',
