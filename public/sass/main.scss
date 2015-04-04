@@ -71,19 +71,23 @@ body {
 #global-nav {
 	border-radius: 0;
 
-		.navbar-brand {
-			font-size: $xx-large;
-			font-family: $alegreya;
-			line-height: 100%;
-		}
+	.navbar-brand {
+		font-size: $xx-large;
+		font-family: $alegreya;
+		line-height: 100%;
+	}
 
-		.icon {
-			font-size: $xx-large;
-		}
+	.icon {
+		font-size: $xx-large;
+	}
 
-		.navbar-toggle {
-			margin-top: 12px;
-		}
+	.navbar-toggle {
+		margin-top: 12px;
+	}
+
+	  .navbar-right {
+	  	margin-right: 0;
+	  }
 }
 
 #main {
