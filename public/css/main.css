@@ -70,7 +70,8 @@ body {
     margin-right: 0; }
 
 #main {
-  float: right; }
+  float: right;
+  top: 20px; }
   @media (min-width: 768px) {
     #main {
       width: 80%;
@@ -79,7 +80,8 @@ body {
 #sidebar {
   background-color: #fff;
   border-right: 1px #E7E7E7 solid;
-  padding: 0; }
+  padding: 0;
+  top: 45px; }
   #sidebar nav {
     border: none; }
   #sidebar nav, #sidebar .navbar {
