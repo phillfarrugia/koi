@@ -92,8 +92,11 @@ body {
 
 #main {
 	float: right;
-	width: 75%;
 	padding-top: 75px;
+
+	@media (min-width: 768px) {
+		width: 75%;
+	}
 }
 
 #sidebar {
@@ -102,7 +105,10 @@ body {
 	border-right: 1px #E7E7E7 solid;
 	padding: 0;
 	position: fixed;
-	width: 25%;
+
+	@media (min-width: 768px) {
+		width: 25%;
+	}
 
 	nav {
 		border: none;

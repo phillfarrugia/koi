@@ -71,16 +71,20 @@ body {
 
 #main {
   float: right;
-  width: 75%;
   padding-top: 75px; }
+  @media (min-width: 768px) {
+    #main {
+      width: 75%; } }
 
 #sidebar {
   height: 100%;
   background-color: #fff;
   border-right: 1px #E7E7E7 solid;
   padding: 0;
-  position: fixed;
-  width: 25%; }
+  position: fixed; }
+  @media (min-width: 768px) {
+    #sidebar {
+      width: 25%; } }
   #sidebar nav {
     border: none; }
   #sidebar nav, #sidebar .navbar {
