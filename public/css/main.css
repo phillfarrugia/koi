@@ -70,21 +70,16 @@ body {
     margin-right: 0; }
 
 #main {
-  float: right;
-  padding-top: 75px; }
+  float: right; }
   @media (min-width: 768px) {
     #main {
+      padding-top: 75px;
       width: 75%; } }
 
 #sidebar {
-  height: 100%;
   background-color: #fff;
   border-right: 1px #E7E7E7 solid;
-  padding: 0;
-  position: fixed; }
-  @media (min-width: 768px) {
-    #sidebar {
-      width: 25%; } }
+  padding: 0; }
   #sidebar nav {
     border: none; }
   #sidebar nav, #sidebar .navbar {
@@ -92,31 +87,38 @@ body {
     #sidebar nav .icon, #sidebar .navbar .icon {
       font-size: 1.8em; }
   @media (min-width: 768px) {
-    #sidebar .navbar .navbar-collapse {
-      padding: 0; }
-    #sidebar .navbar ul {
-      width: 100%; }
-    #sidebar .navbar li {
-      float: none;
-      border-bottom: 1px #E7E7E7 solid; }
-      #sidebar .navbar li .icon-view, #sidebar .navbar li .label-view {
-        display: inline-block;
-        vertical-align: middle; }
-      #sidebar .navbar li .icon-view {
-        width: 20%;
-        text-align: center; }
-      #sidebar .navbar li .label-view {
-        width: 80%; }
-      #sidebar .navbar li:hover {
-        background-color: #E7E7E7; }
-    #sidebar .navbar li a {
-      color: #999; } }
+    #sidebar {
+      width: 25%;
+      position: fixed;
+      height: 100%; }
+      #sidebar .navbar .navbar-collapse {
+        padding: 0; }
+      #sidebar .navbar ul {
+        width: 100%; }
+      #sidebar .navbar li {
+        float: none;
+        border-bottom: 1px #E7E7E7 solid; }
+        #sidebar .navbar li .icon-view, #sidebar .navbar li .label-view {
+          display: inline-block;
+          vertical-align: middle; }
+        #sidebar .navbar li .icon-view {
+          width: 20%;
+          text-align: center; }
+        #sidebar .navbar li .label-view {
+          width: 80%; }
+        #sidebar .navbar li:hover {
+          background-color: #E7E7E7; }
+      #sidebar .navbar li a {
+        color: #999; } }
 
 #top {
-  height: 100px;
-  margin: 20px; }
+  height: 100px; }
+  @media (min-width: 768px) {
+    #top {
+      margin: 20px; } }
 
-#left, #right {
-  margin: 20px; }
+@media (min-width: 768px) {
+  #left, #right {
+    margin: 20px; } }
 
 /*# sourceMappingURL=main.css.map */

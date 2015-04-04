@@ -92,23 +92,17 @@ body {
 
 #main {
 	float: right;
-	padding-top: 75px;
 
 	@media (min-width: 768px) {
+		padding-top: 75px;
 		width: 75%;
 	}
 }
 
 #sidebar {
-	height: 100%;
 	background-color: $white;
 	border-right: 1px #E7E7E7 solid;
 	padding: 0;
-	position: fixed;
-
-	@media (min-width: 768px) {
-		width: 25%;
-	}
 
 	nav {
 		border: none;
@@ -123,36 +117,40 @@ body {
 	}
 
 	@media (min-width: 768px) {
-	  .navbar .navbar-collapse {
-	    padding: 0;
-	  }
+		width: 25%;
+		position: fixed;
+		height: 100%;
 
-	  .navbar ul {
-	    width: 100%;
-	  }
+		.navbar .navbar-collapse {
+			padding: 0;
+		}
 
-	  .navbar li {
-	    float: none;
-	    border-bottom: 1px #E7E7E7 solid;
+		.navbar ul {
+			width: 100%;
+		}
 
-	    .icon-view, .label-view {
-	    	display: inline-block;
-	    	vertical-align: middle;
-	    }
+		.navbar li {
+			float: none;
+			border-bottom: 1px #E7E7E7 solid;
 
-	    .icon-view {
-	    	width: 20%;
-	    	text-align: center;
-	    }
+		.icon-view, .label-view {
+			display: inline-block;
+			vertical-align: middle;
+		}
 
-	    .label-view {
-	    	width: 80%;
-	    }
+		.icon-view {
+			width: 20%;
+			text-align: center;
+		}
 
-	    &:hover {
-	    	background-color: #E7E7E7;
-	    }
-	  }
+		.label-view {
+			width: 80%;
+		}
+
+		&:hover {
+			background-color: #E7E7E7;
+		}
+	}
 
 	  .navbar li a {
 	    color: #999;
@@ -162,9 +160,14 @@ body {
 
 #top {
 	height: 100px;
-	margin: 20px;
+	
+	@media (min-width: 768px) {
+		margin: 20px;
+	}
 }
 
 #left, #right {
-	margin: 20px;
+	@media (min-width: 768px) {
+		margin: 20px;
+	}
 }
