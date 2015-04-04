@@ -2,170 +2,171 @@ include layout
 include navigation
 include sidebar
 
-div.col-lg-10#main
+div.col-xs-12.col-lg-10#main
 	div.row
-		div.col-xs-3
+		div.col-md-3
 			div.panel.panel-default#top
 				div.panel-body
-		div.col-xs-3
+		div.col-md-3
 			div.panel.panel-default#top
 				div.panel-body
-		div.col-xs-3
+		div.col-md-3
 			div.panel.panel-default#top
 				div.panel-body
-		div.col-xs-3
+		div.col-md-3
 			div.panel.panel-default#top
 				div.panel-body
 
 	div.row
-		div.col-xs-8
+		div.col-md-8
 			div.panel.panel-default#left
 				div.panel-heading
 					div.row
-						div.col-xs-5
+						div.col-sm-8
 							h5 Products
 								small  100 total
-						div.col-xs-3
-							div.btn-group.navbar-right
-								button.btn.btn-default(type='button') All Products
-								button.btn.btn-default.dropdown-toggle(type='button' data-toggle='dropdown')
-									span.caret
-									span.sr-only Toggle Dropdown
-								ul.dropdown-menu(role='menu')
-									li
-										a Breakfast
-									li
-										a Recess
-									li
-										a Lunch
-						div.col-xs-4
+						//- div.col-sm-4
+						//- 	div.btn-group.navbar-right
+						//- 		button.btn.btn-default(type='button') All Products
+						//- 		button.btn.btn-default.dropdown-toggle(type='button' data-toggle='dropdown')
+						//- 			span.caret
+						//- 			span.sr-only Toggle Dropdown
+						//- 		ul.dropdown-menu(role='menu')
+						//- 			li
+						//- 				a Breakfast
+						//- 			li
+						//- 				a Recess
+						//- 			li
+						//- 				a Lunch
+						div.col-sm-4
 							div.input-group
 								input.form-control(type='text' placeholder='Search...')
 								span.input-group-btn
 									button.btn.btn-default(type='button')
 										i.icon.ion-search
-				table.table.table-striped.table-hover
-					thead
-						tr
-							th 
-							th Title
-							th Description
-							th Category
-							th Price
-					tbody
-						tr
-							td
-								img(src="http://placehold.it/50x50")
-							td Lorem Ipsum
-							td Lorem Ipsum Dolor Sit Amet..
-							td 
-								span.label.label-primary Sample
-							td $1.99
-						tr
-							td
-								img(src="http://placehold.it/50x50")
-							td Lorem Ipsum
-							td Lorem Ipsum Dolor Sit Amet..
-							td 
-								span.label.label-primary Sample
-							td $1.99
-						tr
-							td
-								img(src="http://placehold.it/50x50")
-							td Lorem Ipsum
-							td Lorem Ipsum Dolor Sit Amet..
-							td 
-								span.label.label-primary Sample
-							td $1.99
-						tr
-							td
-								img(src="http://placehold.it/50x50")
-							td Lorem Ipsum
-							td Lorem Ipsum Dolor Sit Amet..
-							td 
-								span.label.label-primary Sample
-							td $1.99
-						tr
-							td
-								img(src="http://placehold.it/50x50")
-							td Lorem Ipsum
-							td Lorem Ipsum Dolor Sit Amet..
-							td 
-								span.label.label-primary Sample
-							td $1.99
-						tr
-							td
-								img(src="http://placehold.it/50x50")
-							td Lorem Ipsum
-							td Lorem Ipsum Dolor Sit Amet..
-							td 
-								span.label.label-primary Sample
-							td $1.99
-						tr
-							td
-								img(src="http://placehold.it/50x50")
-							td Lorem Ipsum
-							td Lorem Ipsum Dolor Sit Amet..
-							td 
-								span.label.label-primary Sample
-							td $1.99
-						tr
-							td
-								img(src="http://placehold.it/50x50")
-							td Lorem Ipsum
-							td Lorem Ipsum Dolor Sit Amet..
-							td 
-								span.label.label-primary Sample
-							td $1.99
-						tr
-							td
-								img(src="http://placehold.it/50x50")
-							td Lorem Ipsum
-							td Lorem Ipsum Dolor Sit Amet..
-							td 
-								span.label.label-primary Sample
-							td $1.99
-						tr
-							td
-								img(src="http://placehold.it/50x50")
-							td Lorem Ipsum
-							td Lorem Ipsum Dolor Sit Amet..
-							td 
-								span.label.label-primary Sample
-							td $1.99
-						tr
-							td
-								img(src="http://placehold.it/50x50")
-							td Lorem Ipsum
-							td Lorem Ipsum Dolor Sit Amet..
-							td 
-								span.label.label-primary Sample
-							td $1.99
-						tr
-							td
-								img(src="http://placehold.it/50x50")
-							td Lorem Ipsum
-							td Lorem Ipsum Dolor Sit Amet..
-							td 
-								span.label.label-primary Sample
-							td $1.99
-						tr
-							td
-								img(src="http://placehold.it/50x50")
-							td Lorem Ipsum
-							td Lorem Ipsum Dolor Sit Amet..
-							td 
-								span.label.label-primary Sample
-							td $1.99
-						tr
-							td
-								img(src="http://placehold.it/50x50")
-							td Lorem Ipsum
-							td Lorem Ipsum Dolor Sit Amet..
-							td 
-								span.label.label-primary Sample
-							td $1.99
-		div.col-xs-4
+				div.table-responsive
+					table.table.table-striped.table-hover
+						thead
+							tr
+								th 
+								th Title
+								th Description
+								th Category
+								th Price
+						tbody
+							tr
+								td
+									img(src="http://placehold.it/50x50")
+								td Lorem Ipsum
+								td Lorem Ipsum Dolor Sit Amet..
+								td 
+									span.label.label-primary Sample
+								td $1.99
+							tr
+								td
+									img(src="http://placehold.it/50x50")
+								td Lorem Ipsum
+								td Lorem Ipsum Dolor Sit Amet..
+								td 
+									span.label.label-primary Sample
+								td $1.99
+							tr
+								td
+									img(src="http://placehold.it/50x50")
+								td Lorem Ipsum
+								td Lorem Ipsum Dolor Sit Amet..
+								td 
+									span.label.label-primary Sample
+								td $1.99
+							tr
+								td
+									img(src="http://placehold.it/50x50")
+								td Lorem Ipsum
+								td Lorem Ipsum Dolor Sit Amet..
+								td 
+									span.label.label-primary Sample
+								td $1.99
+							tr
+								td
+									img(src="http://placehold.it/50x50")
+								td Lorem Ipsum
+								td Lorem Ipsum Dolor Sit Amet..
+								td 
+									span.label.label-primary Sample
+								td $1.99
+							tr
+								td
+									img(src="http://placehold.it/50x50")
+								td Lorem Ipsum
+								td Lorem Ipsum Dolor Sit Amet..
+								td 
+									span.label.label-primary Sample
+								td $1.99
+							tr
+								td
+									img(src="http://placehold.it/50x50")
+								td Lorem Ipsum
+								td Lorem Ipsum Dolor Sit Amet..
+								td 
+									span.label.label-primary Sample
+								td $1.99
+							tr
+								td
+									img(src="http://placehold.it/50x50")
+								td Lorem Ipsum
+								td Lorem Ipsum Dolor Sit Amet..
+								td 
+									span.label.label-primary Sample
+								td $1.99
+							tr
+								td
+									img(src="http://placehold.it/50x50")
+								td Lorem Ipsum
+								td Lorem Ipsum Dolor Sit Amet..
+								td 
+									span.label.label-primary Sample
+								td $1.99
+							tr
+								td
+									img(src="http://placehold.it/50x50")
+								td Lorem Ipsum
+								td Lorem Ipsum Dolor Sit Amet..
+								td 
+									span.label.label-primary Sample
+								td $1.99
+							tr
+								td
+									img(src="http://placehold.it/50x50")
+								td Lorem Ipsum
+								td Lorem Ipsum Dolor Sit Amet..
+								td 
+									span.label.label-primary Sample
+								td $1.99
+							tr
+								td
+									img(src="http://placehold.it/50x50")
+								td Lorem Ipsum
+								td Lorem Ipsum Dolor Sit Amet..
+								td 
+									span.label.label-primary Sample
+								td $1.99
+							tr
+								td
+									img(src="http://placehold.it/50x50")
+								td Lorem Ipsum
+								td Lorem Ipsum Dolor Sit Amet..
+								td 
+									span.label.label-primary Sample
+								td $1.99
+							tr
+								td
+									img(src="http://placehold.it/50x50")
+								td Lorem Ipsum
+								td Lorem Ipsum Dolor Sit Amet..
+								td 
+									span.label.label-primary Sample
+								td $1.99
+		div.col-md-4
 			div.panel.panel-default#right
 				div.panel-heading
 					h5 Overview
