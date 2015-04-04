@@ -94,8 +94,8 @@ body {
 	float: right;
 
 	@media (min-width: 768px) {
-		padding-top: 75px;
-		width: 75%;
+		width: 80%;
+		top: 58px;
 	}
 }
 
@@ -116,10 +116,27 @@ body {
 		}
 	}
 
+	.navbar li {
+		.icon-view, .label-view {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.icon-view {
+			width: 10%;
+			text-align: center;
+		}
+
+		.label-view {
+			width: 90%;
+		}
+	}
+
 	@media (min-width: 768px) {
-		width: 25%;
+		width: 20%;
 		position: fixed;
 		height: 100%;
+		top: 58px;
 
 		.navbar .navbar-collapse {
 			padding: 0;
@@ -127,30 +144,26 @@ body {
 
 		.navbar ul {
 			width: 100%;
+			position: absolute;
 		}
 
 		.navbar li {
 			float: none;
 			border-bottom: 1px #E7E7E7 solid;
 
-		.icon-view, .label-view {
-			display: inline-block;
-			vertical-align: middle;
-		}
+			&:hover {
+				background-color: #E7E7E7;
+			}
 
-		.icon-view {
-			width: 20%;
-			text-align: center;
-		}
+			.icon-view {
+				width: 25%;
+				text-align: center;
+			}
 
-		.label-view {
-			width: 80%;
+			.label-view {
+				width: 75%;
+			}
 		}
-
-		&:hover {
-			background-color: #E7E7E7;
-		}
-	}
 
 	  .navbar li a {
 	    color: #999;
