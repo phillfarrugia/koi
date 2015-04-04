@@ -57,7 +57,6 @@ body {
       box-shadow: none; }
 
 #global-nav {
-  margin: 0;
   border-radius: 0; }
   #global-nav .navbar-brand {
     font-size: 1.8em;
@@ -68,58 +67,44 @@ body {
   #global-nav .navbar-toggle {
     margin-top: 12px; }
 
+#main {
+  float: right;
+  width: 75%;
+  padding-top: 75px; }
+
 #sidebar {
   height: 100%;
   background-color: #fff;
-  padding-top: 20px;
-  font-size: 400;
   border-right: 1px #E7E7E7 solid;
-  padding: 0px !important;
-  margin: 0px !important; }
+  padding: 0;
+  position: fixed;
+  width: 25%; }
   #sidebar nav {
-    border: none !important; }
+    border: none; }
   #sidebar nav, #sidebar .navbar {
-    background-color: transparent !important; }
+    background-color: transparent; }
     #sidebar nav .icon, #sidebar .navbar .icon {
       font-size: 1.8em; }
-  #sidebar .nav-text, #sidebar .icon {
-    vertical-align: middle; }
-  #sidebar .navbar-default .navbar-nav .active a {
-    background-color: #9999;
-    color: #999 !important;
-    opacity: 1; }
-    #sidebar .navbar-default .navbar-nav .active a:hover {
-      background-color: transparent; }
   @media (min-width: 768px) {
     #sidebar .navbar .navbar-collapse {
-      padding: 0;
-      max-height: none; }
+      padding: 0; }
     #sidebar .navbar ul {
-      float: none; }
-    #sidebar .navbar ul:not {
-      display: block; }
+      width: 100%; }
     #sidebar .navbar li {
       float: none;
-      display: block;
       border-bottom: 1px #E7E7E7 solid; }
       #sidebar .navbar li .icon-view, #sidebar .navbar li .label-view {
         display: inline-block;
         vertical-align: middle; }
       #sidebar .navbar li .icon-view {
         width: 20%;
-        text-align: center !important; }
+        text-align: center; }
       #sidebar .navbar li .label-view {
         width: 80%; }
       #sidebar .navbar li:hover {
-        background-color: #E7E7E7 !important; }
+        background-color: #E7E7E7; }
     #sidebar .navbar li a {
-      padding-top: 12px;
-      padding-bottom: 12px;
-      color: #999 !important;
-      opacity: 0.8;
-      padding: 15px; }
-      #sidebar .navbar li a:hover {
-        opacity: 1; } }
+      color: #999; } }
 
 #top {
   height: 100px;

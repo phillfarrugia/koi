@@ -69,7 +69,6 @@ body {
 }
 
 #global-nav {
-	margin: 0;
 	border-radius: 0;
 
 		.navbar-brand {
@@ -87,58 +86,43 @@ body {
 		}
 }
 
+#main {
+	float: right;
+	width: 75%;
+	padding-top: 75px;
+}
+
 #sidebar {
 	height: 100%;
 	background-color: $white;
-	padding-top: 20px;
-	font-size: $medium;
 	border-right: 1px #E7E7E7 solid;
-	padding: 0px !important;
-	margin: 0px !important;
+	padding: 0;
+	position: fixed;
+	width: 25%;
 
 	nav {
-		border: none !important;
+		border: none;
 	}
 
 	nav, .navbar {
-		background-color: transparent !important;
+		background-color: transparent;
 
 		.icon {
 			font-size: $xx-large;
 		}
 	}
 
-	.nav-text, .icon {
-		vertical-align: middle;
-	}
-
-	.navbar-default .navbar-nav .active a {
-		background-color: #9999;
-		color: #999 !important;
-	    opacity: 1;
-
-		&:hover {
-			background-color: transparent;
-		}
-	}
-
 	@media (min-width: 768px) {
 	  .navbar .navbar-collapse {
 	    padding: 0;
-	    max-height: none;
 	  }
 
 	  .navbar ul {
-	    float: none;
-	  }
-
-	  .navbar ul:not {
-	    display: block;
+	    width: 100%;
 	  }
 
 	  .navbar li {
 	    float: none;
-	    display: block;
 	    border-bottom: 1px #E7E7E7 solid;
 
 	    .icon-view, .label-view {
@@ -148,7 +132,7 @@ body {
 
 	    .icon-view {
 	    	width: 20%;
-	    	text-align: center !important;
+	    	text-align: center;
 	    }
 
 	    .label-view {
@@ -156,26 +140,14 @@ body {
 	    }
 
 	    &:hover {
-	    	background-color: #E7E7E7 !important;
+	    	background-color: #E7E7E7;
 	    }
 	  }
 
 	  .navbar li a {
-	    padding-top: 12px;
-	    padding-bottom: 12px;
-	    color: #999 !important;
-	    opacity: 0.8;
-	    padding: 15px;
-
-	    &:hover {
-	    	opacity: 1;
-	    }
+	    color: #999;
 	  }
 	}
-}
-
-#main {
-	
 }
 
 #top {
